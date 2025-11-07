@@ -1,0 +1,239 @@
+import Link from 'next/link'
+import Image from 'next/image'
+import { ArrowRight, Award, Users, Globe, TrendingUp } from 'lucide-react'
+
+export default function Home() {
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-exhibition-stand.jpg"
+            alt="Modern exhibition stand"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/80 to-dark/70" />
+        </div>
+
+        <div className="relative z-10 container text-center text-light py-32">
+          <h1 className="section-heading text-light mb-6 animate-fade-in">
+            Fuar Katılımınızı Dönüştürün
+          </h1>
+          <p className="section-subheading text-light/90 mb-12 animate-fade-in">
+            Markanızı öne çıkaran, unutulmaz fuar standları ile global pazarda yerinizi alın
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
+            <Link href="/iletisim" className="btn-primary inline-flex items-center justify-center gap-2">
+              Ücretsiz Teklif Alın
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link href="/portfolio" className="btn-secondary inline-flex items-center justify-center gap-2">
+              Projelerimizi Görün
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Stats */}
+      <section className="py-20 bg-light-grey">
+        <div className="container">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="text-5xl font-bold text-primary">15+</div>
+              <p className="text-grey">Yıllık Deneyim</p>
+            </div>
+            <div className="space-y-2">
+              <div className="text-5xl font-bold text-primary">500+</div>
+              <p className="text-grey">Tamamlanan Proje</p>
+            </div>
+            <div className="space-y-2">
+              <div className="text-5xl font-bold text-primary">25+</div>
+              <p className="text-grey">Ülkede Hizmet</p>
+            </div>
+            <div className="space-y-2">
+              <div className="text-5xl font-bold text-primary">%98</div>
+              <p className="text-grey">Müşteri Memnuniyeti</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview */}
+      <section className="py-24 bg-light">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="section-heading">Hizmetlerimiz</h2>
+            <p className="section-subheading">
+              İhtiyacınıza özel, kapsamlı fuar standı çözümleri
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {servicesPreview.map((service, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md card-hover">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                <p className="text-grey mb-4">{service.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/hizmetler" className="btn-primary inline-flex items-center gap-2">
+              Tüm Hizmetleri Görüntüle
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Preview */}
+      <section className="py-24 bg-dark text-light">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="section-heading text-light">Projelerimiz</h2>
+            <p className="section-subheading text-light/80">
+              Gerçekleştirdiğimiz başarılı projelerden örnekler
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {[1, 2, 3, 4, 5, 6].map((num) => (
+              <div key={num} className="relative aspect-[4/3] rounded-lg overflow-hidden group cursor-pointer">
+                <Image
+                  src={`/images/portfolio${num}.jpg`}
+                  alt={`Project ${num}`}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-6 w-full">
+                    <h3 className="text-xl font-bold mb-2">Proje {num}</h3>
+                    <p className="text-light/80 text-sm">Fuar Standı Tasarımı</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/portfolio" className="btn-secondary inline-flex items-center gap-2">
+              Tüm Projeleri İncele
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Clients Preview */}
+      <section className="py-24 bg-light-grey">
+        <div className="container">
+          <div className="text-center mb-16">
+            <h2 className="section-heading">Referanslarımız</h2>
+            <p className="section-subheading">
+              Dünya çapında lider markalarla çalışmanın gururunu yaşıyoruz
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+            {clientLogos.map((client, index) => (
+              <div key={index} className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={120}
+                  height={60}
+                  className="grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link href="/hakkimizda#referanslar" className="btn-primary inline-flex items-center gap-2">
+              Daha Fazla Referans
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Preview */}
+      <section className="py-24 bg-light">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="section-heading mb-8">Müşterilerimiz Ne Diyor</h2>
+            
+            <div className="bg-white p-12 rounded-lg shadow-lg">
+              <div className="text-6xl text-primary mb-6">"</div>
+              <blockquote className="text-2xl text-grey italic mb-8">
+                Modern Çizgi Mimarlık ile çalışmak harika bir deneyimdi. Profesyonel yaklaşımları ve detaylara gösterdikleri özen sayesinde fuarda gerçekten öne çıktık. Kesinlikle tavsiye ediyorum.
+              </blockquote>
+              <div className="border-t pt-6">
+                <p className="font-bold text-xl text-dark">Ahmet Yılmaz</p>
+                <p className="text-grey">Genel Müdür, TechVision Turkey</p>
+              </div>
+            </div>
+
+            <div className="mt-12">
+              <Link href="/hakkimizda#referanslar" className="btn-primary inline-flex items-center gap-2">
+                Tüm Referansları Oku
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-24 bg-primary text-light">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Bir Sonraki Fuarınız İçin Hazır mısınız?
+          </h2>
+          <p className="text-xl mb-12 max-w-2xl mx-auto text-light/90">
+            Markanızı öne çıkaracak, etkileyici bir fuar standı için bugün iletişime geçin
+          </p>
+          <Link href="/iletisim" className="inline-flex items-center gap-2 bg-light text-primary px-10 py-5 rounded-lg font-bold text-lg hover:bg-light/90 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            Ücretsiz Danışmanlık Alın
+            <ArrowRight className="w-6 h-6" />
+          </Link>
+        </div>
+      </section>
+    </>
+  )
+}
+
+const servicesPreview = [
+  {
+    icon: Award,
+    title: 'Özel Stand Tasarımı',
+    description: 'Markanıza özel, benzersiz tasarımlar ile farkınızı ortaya koyun.',
+  },
+  {
+    icon: Users,
+    title: 'Modüler Sistemler',
+    description: 'Esnek ve yeniden kullanılabilir modüler stand çözümleri.',
+  },
+  {
+    icon: Globe,
+    title: 'Uluslararası Hizmet',
+    description: 'Avrupa ve dünya çapında profesyonel fuar standı hizmetleri.',
+  },
+]
+
+const clientLogos = [
+  { name: 'Eraco', logo: '/images/logos/eraco-logo.png' },
+  { name: 'FSN', logo: '/images/logos/fsn-logo.png' },
+  { name: 'Glore', logo: '/images/logos/glore-logo.png' },
+  { name: 'Kilim Mobilya', logo: '/images/logos/kilim-logo.jpg' },
+  { name: 'Benetton', logo: '/images/logos/benetton-logo.png' },
+  { name: 'Giza Carpet', logo: '/images/logos/giza-logo.png' },
+  { name: 'Star Alüminyum', logo: '/images/logos/star-logo.jpg' },
+  { name: 'Özaktaç', logo: '/images/logos/ozaktac-logo.jpeg' },
+]
