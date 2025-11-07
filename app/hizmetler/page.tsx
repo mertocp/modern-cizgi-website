@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Lightbulb, Hammer, Grid3x3, Box, Wrench, Globe, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, Lightbulb, Hammer, LayoutGrid, Box, Wrench, Globe, CheckCircle2 } from 'lucide-react'
 
 export const metadata = {
   title: 'Hizmetlerimiz | Modern Çizgi Mimarlık',
@@ -32,7 +32,7 @@ const services = [
     ],
   },
   {
-    icon: Grid3x3,
+    icon: LayoutGrid,
     title: 'Modüler Sistemler',
     description: 'Esnek, yeniden kullanılabilir ve maliyet etkin modüler stand sistemleri.',
     features: [
