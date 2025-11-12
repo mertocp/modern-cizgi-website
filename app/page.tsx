@@ -142,16 +142,19 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-4 gap-8 mb-12">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 mb-12">
               {clientLogos.map((client, index) => (
-                <div key={index} className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <div 
+                  key={index} 
+                  className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
+                >
                   <Image
                     src={client.logo}
-                    alt={client.name}
-                    width={120}
-                    height={60}
-                    className="grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                    alt={`${client.name} logo`}
+                    width={140}
+                    height={70}
+                    className="object-contain"
                   />
                 </div>
               ))}
@@ -205,12 +208,24 @@ const servicesPreview = [
 ]
 
 const clientLogos = [
-  { name: 'Eraco', logo: '/images/logos/eraco-logo.png' },
-  { name: 'FSN', logo: '/images/logos/fsn-logo.png' },
-  { name: 'Glore', logo: '/images/logos/glore-logo.png' },
-  { name: 'Kilim Mobilya', logo: '/images/logos/kilim-logo.jpg' },
-  { name: 'Benetton', logo: '/images/logos/benetton-logo.png' },
-  { name: 'Giza Carpet', logo: '/images/logos/giza-logo.png' },
-  { name: 'Star Alüminyum', logo: '/images/logos/star-logo.jpg' },
-  { name: 'Özaktaç', logo: '/images/logos/ozaktac-logo.jpeg' },
+  // Row 1
+  { name: 'Eraco', logo: '/images/references/eraco.png' },
+  { name: 'FSN Medical Technologies', logo: '/images/references/fsn.png' },
+  { name: 'GLORE', logo: '/images/references/glore.png' },
+  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg' },
+  { name: 'Benetton', logo: '/images/references/benetton.png' },
+  
+  // Row 2
+  { name: 'Giza Carpet', logo: '/images/references/giza.png' },
+  { name: 'Star Alüminyum', logo: '/images/references/star.png' },
+  { name: 'Özaktaç', logo: '/images/references/ozaktac.png' },
+  { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png' },
+  { name: 'Kron', logo: '/images/references/kron.png' },
+  
+  // Row 3
+  { name: 'Orma', logo: '/images/references/orma.png' },
+  { name: 'Kareban', logo: '/images/references/kareban.png' },
+  { name: 'Arco Irisa', logo: '/images/references/arcoirisa.jpg' },
+  { name: 'DVT Devotrans', logo: '/images/references/dvt.jpg' },
+  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png' },
 ]
