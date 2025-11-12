@@ -54,7 +54,9 @@ export default function Home() {
               <p className="text-grey">Uluslararası Hizmet</p>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl font-bold text-primary">250.000 m²</div>
+              <div className="text-5xl font-bold text-primary">
+                250.000 m²
+              </div>
               <p className="text-grey">Toplam Proje Hacmi</p>
             </div>
           </div>
@@ -140,18 +142,20 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-            {clientLogos.map((client, index) => (
-              <div key={index} className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={120}
-                  height={60}
-                  className="grayscale hover:grayscale-0 transition-all duration-300 object-contain"
-                />
-              </div>
-            ))}
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-4 gap-8 mb-12">
+              {clientLogos.map((client, index) => (
+                <div key={index} className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={120}
+                    height={60}
+                    className="grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="text-center">

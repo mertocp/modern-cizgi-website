@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Award, Users, Globe, Target, Heart, Zap, Quote } from 'lucide-react'
+import { ArrowRight, Award, Users, Globe, Target, Heart, Zap } from 'lucide-react'
 
 export const metadata = {
   title: 'Hakkımızda | Modern Çizgi Mimarlık',
@@ -63,6 +63,11 @@ const timeline = [
     title: 'Küresel Genişleme',
     description: 'Yedi ülkede aktif operasyonlarla global büyüme hedeflerimize ulaştık.',
   },
+  {
+    year: '2026',
+    title: 'Geleceğe Bakış',
+    description: 'Sürdürülebilir inovasyon ve dijital dönüşümle sektörün geleceğini şekillendiriyoruz.',
+  },
 ]
 
 const stats = [
@@ -87,33 +92,6 @@ const values = [
     icon: Award,
     title: 'Kalite',
     description: 'Tasarımdan üretime, kurulumdan desteğe kadar her aşamada en yüksek kalite standartlarını uyguluyoruz.',
-  },
-]
-
-const testimonials = [
-  {
-    quote: 'Modern Çizgi Mimarlık ile çalışmak harika bir deneyimdi. Profesyonel yaklaşımları ve detaylara gösterdikleri özen sayesinde fuarda gerçekten öne çıktık.',
-    author: 'Ahmet Yılmaz',
-    position: 'Genel Müdür',
-    company: 'TechVision Turkey',
-  },
-  {
-    quote: 'Üç farklı ülkede düzenlenen fuarlarda Modern Çizgi ile çalıştık. Her seferinde kusursuz bir organizasyon ve etkileyici standlar. Kesinlikle tavsiye ediyorum.',
-    author: 'Sarah Johnson',
-    position: 'Marketing Director',
-    company: 'Global Innovations GmbH',
-  },
-  {
-    quote: 'İlk fuar deneyimimizdi ve çok endişeliydik. Ancak Modern Çizgi ekibi her aşamada yanımızda oldu. Sonuç harika oldu, yeni müşteriler kazandık!',
-    author: 'Mehmet Demir',
-    position: 'Satış Müdürü',
-    company: 'İnovatif Çözümler A.Ş.',
-  },
-  {
-    quote: 'Modüler stand sistemleri ile birçok farklı fuarda aynı standı farklı konfigürasyonlarda kullandık. Hem maliyet tasarrufu hem de harika sonuçlar.',
-    author: 'Elena Rossi',
-    position: 'Exhibition Manager',
-    company: 'Design Milano',
   },
 ]
 
@@ -155,7 +133,7 @@ export default function HakkimizdaPage() {
         </div>
       </section>
 
-      {/* Timeline */}
+      {/* Timeline - Grid Layout */}
       <section className="py-24 bg-light-grey">
         <div className="container">
           <div className="text-center mb-16">
@@ -163,22 +141,17 @@ export default function HakkimizdaPage() {
             <p className="section-subheading">Büyüme ve başarı ile dolu yıllar</p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {timeline.map((item, index) => (
-              <div key={index} className="flex gap-8 items-start">
-                <div className="flex-shrink-0 w-24 text-right">
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-light font-bold text-lg">{index + 1}</span>
+                  </div>
                   <div className="text-3xl font-bold text-primary">{item.year}</div>
                 </div>
-                <div className="relative flex-shrink-0 w-4 pt-2">
-                  <div className="w-4 h-4 bg-primary rounded-full border-4 border-light-grey"></div>
-                  {index < timeline.length - 1 && (
-                    <div className="absolute top-4 left-1/2 w-0.5 h-full bg-primary/30 -translate-x-1/2"></div>
-                  )}
-                </div>
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-grey">{item.description}</p>
-                </div>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-grey text-sm">{item.description}</p>
               </div>
             ))}
           </div>
@@ -232,42 +205,20 @@ export default function HakkimizdaPage() {
             <p className="section-subheading">Güvenilir markalarla gurur verici işbirlikleri</p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {clientLogos.map((client, index) => (
-              <div key={index} className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={120}
-                  height={60}
-                  className="grayscale hover:grayscale-0 transition-all duration-300 object-contain"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-24 bg-light">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="section-heading">Müşteri Yorumları</h2>
-            <p className="section-subheading">Bizimle çalışan müşterilerimizin deneyimleri</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
-                <Quote className="w-12 h-12 text-primary mb-4" />
-                <p className="text-lg text-grey italic mb-6">"{testimonial.quote}"</p>
-                <div className="border-t pt-4">
-                  <p className="font-bold text-lg">{testimonial.author}</p>
-                  <p className="text-grey">{testimonial.position}</p>
-                  <p className="text-primary font-medium">{testimonial.company}</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-4 gap-8">
+              {clientLogos.map((client, index) => (
+                <div key={index} className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={120}
+                    height={60}
+                    className="grayscale hover:grayscale-0 transition-all duration-300 object-contain"
+                  />
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

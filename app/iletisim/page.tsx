@@ -324,12 +324,12 @@ export default function IletisimPage() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Turkey Map */}
+            {/* Turkey Map - Avcılar, Istanbul */}
             <div>
               <h3 className="text-2xl font-bold mb-4">Avcılar, İstanbul</h3>
               <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8634847776944!2d28.72194087645457!3d41.04302371749253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f1d4c8d0001%3A0x0!2zNDHCsDAyJzM0LjkiTiAyOMKwNDMnMjUuMiJF!5e0!3m2!1str!2str!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.239!2d28.7219408!3d41.0269167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa3f0e1d6c9a5%3A0x7a8f9e8b6c5d4e3f!2sCihangir%2C%20%C5%9Eht.%20P.Er%20Yavuz%20Bahar%20Sk.%20No%3A27%2C%2034310%20Avc%C4%B1lar%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1699999999999!5m2!1str!2str"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -339,14 +339,25 @@ export default function IletisimPage() {
                   title="Istanbul Office Location"
                 />
               </div>
+              <div className="mt-4 text-center">
+                <a
+                  href="https://maps.app.goo.gl/Ejwds5FQETZMyUJQ8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors font-semibold"
+                >
+                  <MapPin className="w-4 h-4" />
+                  Google Maps'te Aç
+                </a>
+              </div>
             </div>
 
-            {/* Germany Map */}
+            {/* Germany Map - Lünen */}
             <div>
               <h3 className="text-2xl font-bold mb-4">Lünen, Almanya</h3>
               <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.4829384727396!2d7.528191976454!3d51.61750297184289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM3JzAzLjAiTiA3wrAzMSc0Ny41IkU!5e0!3m2!1sen!2sde!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.5!2d7.5281919!3d51.6174982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b91f0e1d6c9a5%3A0x7a8f9e8b6c5d4e3f!2sMAm%20K%C3%BChlturm%2017%2C%2044536%20L%C3%BCnen%2C%20Germany!5e0!3m2!1sen!2sde!4v1699999999999!5m2!1sen!2sde"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -355,6 +366,17 @@ export default function IletisimPage() {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Lünen Office Location"
                 />
+              </div>
+              <div className="mt-4 text-center">
+                <a
+                  href="https://maps.app.goo.gl/W43ZAXxsmNeAFkto8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors font-semibold"
+                >
+                  <MapPin className="w-4 h-4" />
+                  Google Maps'te Aç
+                </a>
               </div>
             </div>
           </div>
