@@ -132,7 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clients Preview - UPDATED WITH ENLARGED LOGOS */}
+      {/* Clients Preview - UPDATED WITH ÖZAKTAÇ, KILIM, ONE CLICK PROFIT ENLARGED */}
       <section className="py-24 bg-light-grey">
         <div className="container">
           <div className="text-center mb-16">
@@ -210,26 +210,26 @@ const servicesPreview = [
   },
 ]
 
-// UPDATED: Enlarged logos 30-40% and fixed Benetton
+// UPDATED: Özaktaç, Kilim, and One Click Profit enlarged further
 const clientLogos = [
-  // Row 1 - Increased from 140x70 to 180x90 (29% larger)
+  // Row 1
   { name: 'Eraco', logo: '/images/references/eraco.png', width: 180, height: 90 },
   { name: 'FSN Medical Technologies', logo: '/images/references/fsn.png', width: 180, height: 90 },
-  { name: 'GLORE', logo: '/images/references/glore.png', width: 170, height: 90 }, // Slightly smaller for height balance
-  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg', width: 200, height: 100 }, // Increased from 160x80 to 200x100
-  { name: 'Benetton', logo: '/images/references/benetton.png', width: 180, height: 90 }, // FIXED: Now uses solid green version
+  { name: 'GLORE', logo: '/images/references/glore.png', width: 170, height: 90 },
+  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg', width: 220, height: 110 }, // INCREASED from 200x100
+  { name: 'Benetton', logo: '/images/references/benetton.png', width: 180, height: 90 },
   
   // Row 2
   { name: 'Giza Carpet', logo: '/images/references/giza.png', width: 180, height: 90 },
   { name: 'Star Alüminyum', logo: '/images/references/star.png', width: 180, height: 90 },
-  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 180, height: 90 },
+  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 210, height: 105 }, // INCREASED from 180x90
   { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png', width: 180, height: 90 },
-  { name: 'Kron', logo: '/images/references/kron.png', width: 200, height: 100 }, // Increased from 160x80 to 200x100
+  { name: 'Kron', logo: '/images/references/kron.png', width: 200, height: 100 },
   
   // Row 3
   { name: 'Orma', logo: '/images/references/orma.png', width: 180, height: 90 },
   { name: 'Kareban', logo: '/images/references/kareban.png', width: 180, height: 90 },
   { name: 'Arco Irisa', logo: '/images/references/arcoirisa.jpg', width: 180, height: 90 },
   { name: 'DVT Devotrans', logo: '/images/references/dvt.jpg', width: 180, height: 90 },
-  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 180, height: 90 },
+  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 210, height: 105 }, // INCREASED from 180x90
 ]

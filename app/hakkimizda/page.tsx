@@ -87,22 +87,22 @@ const testimonials = [
   },
 ]
 
-// UPDATED: 15 logos with enlarged sizes and fixed Benetton
+// UPDATED: Özaktaç, Kilim, and One Click Profit enlarged further
 const clientLogos = [
-  { name: 'Kilim Mobilya', logo: '/images/references/kilim.png', width: 200, height: 100 },
+  { name: 'Kilim Mobilya', logo: '/images/references/kilim.png', width: 220, height: 110 }, // INCREASED
   { name: 'Kron', logo: '/images/references/kron.png', width: 200, height: 100 },
   { name: 'Eraco', logo: '/images/references/eraco.png', width: 180, height: 90 },
   { name: 'FSN', logo: '/images/references/fsn.jpg', width: 180, height: 90 },
-  { name: 'Benetton', logo: '/images/references/benetton.png', width: 180, height: 90 }, // FIXED: Using solid green version
+  { name: 'Benetton', logo: '/images/references/benetton.png', width: 180, height: 90 },
   { name: 'Giza', logo: '/images/references/giza.png', width: 180, height: 90 },
   { name: 'Star', logo: '/images/references/star.jpg', width: 180, height: 90 },
-  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 180, height: 90 },
+  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 210, height: 105 }, // INCREASED
   { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png', width: 180, height: 90 },
   { name: 'Orma', logo: '/images/references/orma.jpg', width: 180, height: 90 },
   { name: 'Kareban', logo: '/images/references/kareban.png', width: 180, height: 90 },
   { name: 'Arco Irisa', logo: '/images/references/arcoirisa.png', width: 180, height: 90 },
   { name: 'DVT', logo: '/images/references/dvt.png', width: 180, height: 90 },
-  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 180, height: 90 },
+  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 210, height: 105 }, // INCREASED
   { name: 'GLORE', logo: '/images/references/glore.png', width: 170, height: 90 },
 ]
 
