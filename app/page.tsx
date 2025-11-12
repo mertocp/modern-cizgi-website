@@ -163,33 +163,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonial Preview */}
-      <section className="py-24 bg-light">
-        <div className="container">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="section-heading mb-8">Müşterilerimiz Ne Diyor</h2>
-            
-            <div className="bg-white p-12 rounded-lg shadow-lg">
-              <div className="text-6xl text-primary mb-6">"</div>
-              <blockquote className="text-2xl text-grey italic mb-8">
-                Modern Çizgi Mimarlık ile çalışmak harika bir deneyimdi. Profesyonel yaklaşımları ve detaylara gösterdikleri özen sayesinde fuarda gerçekten öne çıktık. Kesinlikle tavsiye ediyorum.
-              </blockquote>
-              <div className="border-t pt-6">
-                <p className="font-bold text-xl text-dark">Ahmet Yılmaz</p>
-                <p className="text-grey">Genel Müdür, TechVision Turkey</p>
-              </div>
-            </div>
-
-            <div className="mt-12">
-              <Link href="/hakkimizda#referanslar" className="btn-primary inline-flex items-center gap-2">
-                Tüm Referansları Oku
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Final CTA */}
       <section className="py-24 bg-primary text-light">
         <div className="container text-center">
