@@ -210,24 +210,22 @@ export default function IletisimPage() {
                 <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
                   <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-primary" />
-                    Türkiye Ofisi
+                    Türkiye Merkez Ofisi
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div className="text-grey">
                         <p className="font-semibold">Adres:</p>
-                        <p>Atatürk Mahallesi, Modern Plaza</p>
-                        <p>Kat: 5, No: 45</p>
-                        <p>34758 Ataşehir, İstanbul, Türkiye</p>
+                        <p>Cihangir, Şht. P.Er Yavuz Bahar Sk. No:27</p>
+                        <p>34310 Avcılar, İstanbul, Türkiye</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div className="text-grey">
                         <p className="font-semibold">Telefon:</p>
-                        <p>+90 212 555 0123</p>
-                        <p>+90 532 555 0123</p>
+                        <p>+90 212 452 93 59</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -238,6 +236,15 @@ export default function IletisimPage() {
                         <p>sales@moderncizgi.com</p>
                       </div>
                     </div>
+                    <a
+                      href="https://maps.app.goo.gl/Ejwds5FQETZMyUJQ8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors font-semibold mt-2"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Haritada Görüntüle
+                    </a>
                   </div>
                 </div>
 
@@ -252,16 +259,15 @@ export default function IletisimPage() {
                       <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div className="text-grey">
                         <p className="font-semibold">Adres:</p>
-                        <p>Messestraße 12</p>
-                        <p>60327 Frankfurt am Main</p>
-                        <p>Deutschland</p>
+                        <p>MAm Kühlturm 17</p>
+                        <p>44536 Lünen, Deutschland</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div className="text-grey">
                         <p className="font-semibold">Telefon:</p>
-                        <p>+49 69 242 4567</p>
+                        <p>+90 538 405 33 70</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -271,6 +277,15 @@ export default function IletisimPage() {
                         <p>germany@moderncizgi.com</p>
                       </div>
                     </div>
+                    <a
+                      href="https://maps.app.goo.gl/W43ZAXxsmNeAFkto8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-primary hover:text-primary-dark transition-colors font-semibold mt-2"
+                    >
+                      <MapPin className="w-4 h-4" />
+                      Haritada Görüntüle
+                    </a>
                   </div>
                 </div>
               </div>
@@ -311,10 +326,10 @@ export default function IletisimPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Turkey Map */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">İstanbul, Türkiye</h3>
+              <h3 className="text-2xl font-bold mb-4">Avcılar, İstanbul</h3>
               <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.7461406424587!2d29.126754!3d40.9929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDU5JzM0LjQiTiAyOcKwMDcnMzYuMyJF!5e0!3m2!1str!2str!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8634847776944!2d28.72194087645457!3d41.04302371749253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b55f1d4c8d0001%3A0x0!2zNDHCsDAyJzM0LjkiTiAyOMKwNDMnMjUuMiJF!5e0!3m2!1str!2str!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -328,17 +343,17 @@ export default function IletisimPage() {
 
             {/* Germany Map */}
             <div>
-              <h3 className="text-2xl font-bold mb-4">Frankfurt, Almanya</h3>
+              <h3 className="text-2xl font-bold mb-4">Lünen, Almanya</h3>
               <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.8!2d8.6463!3d50.1072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDA2JzI2LjAiTiA4wrAzOCc0Ni43IkU!5e0!3m2!1sen!2sde!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.4829384727396!2d7.528191976454!3d51.61750297184289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM3JzAzLjAiTiA3wrAzMSc0Ny41IkU!5e0!3m2!1sen!2sde!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Frankfurt Office Location"
+                  title="Lünen Office Location"
                 />
               </div>
             </div>

@@ -4,42 +4,72 @@ import { ArrowRight, Award, Users, Globe, Target, Heart, Zap, Quote } from 'luci
 
 export const metadata = {
   title: 'Hakkımızda | Modern Çizgi Mimarlık',
-  description: '15+ yıldır fuar standı tasarımı ve inşaatında öncü. 500+ başarılı proje ile global fuarlarda markanızı öne çıkarıyoruz.',
+  description: '22 yıldır fuar standı tasarımı ve inşaatında öncü. 2500+ başarılı proje ile global fuarlarda markanızı öne çıkarıyoruz.',
 }
 
 const timeline = [
   {
-    year: '2008',
+    year: '2004',
     title: 'Kuruluş',
-    description: 'Modern Çizgi Mimarlık, İstanbul\'da küçük bir ekiple fuar standı sektörüne adım attı.',
+    description: 'Modern Çizgi Mimarlık, fuar standı sektöründe yolculuğuna başladı.',
   },
   {
-    year: '2012',
-    title: 'Uluslararası Açılım',
-    description: 'İlk Avrupa projelerimizi tamamladık ve Almanya ofisimizi açtık.',
+    year: '2007',
+    title: 'İlk Büyük Proje',
+    description: 'İstanbul\'da düzenlenen uluslararası fuarda ilk büyük projemizi tamamladık.',
+  },
+  {
+    year: '2010',
+    title: 'Avrupa Açılımı',
+    description: 'Almanya\'da ilk projelerimizi gerçekleştirerek uluslararası arenaya adım attık.',
+  },
+  {
+    year: '2013',
+    title: 'Üretim Tesisi',
+    description: 'Modern üretim tesisimizi İstanbul\'da faaliyete geçirdik.',
   },
   {
     year: '2016',
-    title: '250+ Proje Başarısı',
-    description: 'Türkiye ve Avrupa\'da 250\'den fazla başarılı projeye imza attık.',
+    title: '1000+ Stand Başarısı',
+    description: 'Bin projeyi aşan deneyimimizle sektörde önemli bir kilometre taşına ulaştık.',
+  },
+  {
+    year: '2018',
+    title: 'Almanya Ofisi',
+    description: 'Lünen\'de Avrupa operasyonlarımız için ofis açtık.',
   },
   {
     year: '2020',
-    title: 'Teknoloji Yatırımı',
-    description: 'En son teknoloji 3D tasarım ve üretim ekipmanlarına yatırım yaptık.',
+    title: 'Dijital Dönüşüm',
+    description: '3D sanal tur ve dijital tasarım hizmetlerini portföyümüze ekledik.',
+  },
+  {
+    year: '2022',
+    title: 'Sürdürülebilirlik',
+    description: 'Çevre dostu malzemeler ve sürdürülebilir üretim süreçlerine geçiş yaptık.',
+  },
+  {
+    year: '2023',
+    title: '2000+ Proje',
+    description: 'İki bin projeyi tamamlayarak sektörün lider firması olduk.',
   },
   {
     year: '2024',
-    title: '500+ Proje Miladı',
-    description: '500\'ü aşkın başarılı projeyle sektörün lider firmaları arasına girdik.',
+    title: 'Yeni Teknolojiler',
+    description: 'Yapay zeka destekli tasarım ve modüler akıllı stand sistemlerini başlattık.',
+  },
+  {
+    year: '2025',
+    title: 'Küresel Genişleme',
+    description: 'Yedi ülkede aktif operasyonlarla global büyüme hedeflerimize ulaştık.',
   },
 ]
 
 const stats = [
-  { icon: Award, number: '15+', label: 'Yıllık Deneyim' },
-  { icon: Users, number: '500+', label: 'Tamamlanan Proje' },
-  { icon: Globe, number: '25+', label: 'Hizmet Verilen Ülke' },
-  { icon: Target, number: '%98', label: 'Müşteri Memnuniyeti' },
+  { icon: Award, number: '22+ Yıl', label: 'Sektör Deneyimi' },
+  { icon: Users, number: '2500+', label: 'Tamamlanan Stand' },
+  { icon: Globe, number: '7 Ülke', label: 'Uluslararası Hizmet' },
+  { icon: Target, number: '250.000 m²', label: 'Toplam Proje Hacmi' },
 ]
 
 const values = [
@@ -104,9 +134,9 @@ export default function HakkimizdaPage() {
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-dark via-dark-grey to-dark text-light">
         <div className="container text-center">
-          <h1 className="section-heading text-light mb-6">Hakkımızda</h1>
+          <h1 className="section-heading text-light mb-6">Fuar Standı Sektörünün 22 Yıllık Öncüsü</h1>
           <p className="section-subheading text-light/90 max-w-3xl mx-auto">
-            15 yılı aşkın deneyimimiz ile fuar standı sektörünün öncü markası
+            2004'ten bugüne 2500+ projeyle markaların fuarlardaki başarı ortağı
           </p>
         </div>
       </section>
@@ -118,13 +148,7 @@ export default function HakkimizdaPage() {
             <h2 className="text-4xl font-bold mb-8 text-center">Hikayemiz</h2>
             <div className="space-y-6 text-lg text-grey">
               <p>
-                Modern Çizgi Mimarlık, 2008 yılında İstanbul'da kurulan, fuar standı tasarımı ve inşaatı konusunda uzmanlaşmış bir şirkettir. Kurulduğumuz günden bu yana, markalarını fuarlarda en iyi şekilde temsil etmek isteyen firmalar için yaratıcı, fonksiyonel ve etkileyici stand çözümleri üretiyoruz.
-              </p>
-              <p>
-                15 yılı aşkın deneyimimiz boyunca, Türkiye'nin yanı sıra Almanya, İtalya, Fransa, İspanya gibi birçok Avrupa ülkesinde 500'den fazla başarılı projeye imza attık. Teknoloji, mobilya, otomotiv, gıda, tekstil ve enerji gibi farklı sektörlerden müşterilerimize hizmet vermenin gururunu yaşıyoruz.
-              </p>
-              <p>
-                Misyonumuz, müşterilerimizin fuar katılımlarını başarı hikayelerine dönüştürmek. Her proje için özel olarak tasarlanan standlarımız, markaların hedef kitlelerine ulaşmasına ve unutulmaz deneyimler yaratmasına yardımcı oluyor.
+                2004 yılında kurulan Modern Çizgi Mimarlık, geleneksel stand üretimini sanat ve teknoloji ile harmanlayarak sektörde yeni bir dönem başlattı. İnovasyon DNA'mızda var; 3D görselleştirmeden modüler sistemlere, ahşap tasarımlardan Maxima premium standlara kadar geniş ürün yelpazemizle her marka için özel çözümler üretiyoruz. Avrupa'dan Türkiye'ye uzanan geniş hizmet ağımızla, markanızın global fuarlardaki en güçlü destekçisiyiz.
               </p>
             </div>
           </div>
@@ -170,7 +194,7 @@ export default function HakkimizdaPage() {
                 <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-10 h-10 text-light" />
                 </div>
-                <div className="text-5xl font-bold mb-2 text-primary">{stat.number}</div>
+                <div className="text-4xl font-bold mb-2 text-primary">{stat.number}</div>
                 <p className="text-light/80">{stat.label}</p>
               </div>
             ))}
@@ -255,7 +279,7 @@ export default function HakkimizdaPage() {
             Siz de Başarı Hikayemizin Parçası Olun
           </h2>
           <p className="text-xl mb-12 max-w-2xl mx-auto text-light/90">
-            15 yıllık deneyimimiz ve uzman ekibimizle bir sonraki projenizde yanınızdayız
+            22 yıllık deneyimimiz ve uzman ekibimizle bir sonraki projenizde yanınızdayız
           </p>
           <Link href="/iletisim" className="inline-flex items-center gap-2 bg-light text-primary px-10 py-5 rounded-lg font-bold text-lg hover:bg-light/90 transition-all duration-300 hover:scale-105">
             Hemen İletişime Geçin

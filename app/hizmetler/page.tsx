@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Lightbulb, Hammer, LayoutGrid, Box, Wrench, Globe, CheckCircle2 } from 'lucide-react'
+import { ArrowRight, Lightbulb, Hammer, LayoutGrid, Box, Wrench, Globe, CheckCircle2, TreeDeciduous, Award } from 'lucide-react'
 
 export const metadata = {
   title: 'Hizmetlerimiz | Modern Çizgi Mimarlık',
@@ -41,6 +41,30 @@ const services = [
       'Hızlı kurulum süresi',
       'Ekonomik ve sürdürülebilir',
       'Geniş konfigürasyon seçenekleri',
+    ],
+  },
+  {
+    icon: TreeDeciduous,
+    title: 'Ahşap Stand Tasarımı',
+    description: 'Doğal ve sıcak bir atmosfer yaratan ahşap stand çözümleri ile markanıza organik ve prestijli bir kimlik kazandırın.',
+    features: [
+      'Doğal ahşap malzeme kullanımı',
+      'Çevre dostu ve sürdürülebilir tasarım',
+      'Özel mobilye entegrasyonu',
+      'Sıcak ve davetkar atmosfer',
+      'Premium marka imajı',
+    ],
+  },
+  {
+    icon: Award,
+    title: 'Maxima Premium Standlar',
+    description: 'Geniş alanlı, etkileyici ve gösterişli stand çözümleri ile fuarda maksimum görünürlük ve prestij sağlayın.',
+    features: [
+      '100+ m² geniş alan tasarımları',
+      'Çok katlı ve kompleks yapılar',
+      'VIP toplantı odaları ve lounge alanları',
+      'Özel aydınlatma ve AV sistemleri',
+      'Tam entegre hizmet paketi',
     ],
   },
   {
