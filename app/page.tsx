@@ -54,7 +54,7 @@ export default function Home() {
               <p className="text-grey">Uluslararası Hizmet</p>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl font-bold text-primary">
+              <div className="text-5xl font-bold text-primary whitespace-nowrap">
                 250.000 m²
               </div>
               <p className="text-grey">Toplam Proje Hacmi</p>
@@ -115,7 +115,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-6 w-full">
-                    <h3 className="text-xl font-bold mb-2">Proje {num}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-primary">Proje {num}</h3>
                     <p className="text-light/80 text-sm">Fuar Standı Tasarımı</p>
                   </div>
                 </div>

@@ -133,7 +133,7 @@ export default function HakkimizdaPage() {
         </div>
       </section>
 
-      {/* Timeline - Grid Layout */}
+      {/* Timeline - 2 Column Layout */}
       <section className="py-24 bg-light-grey">
         <div className="container">
           <div className="text-center mb-16">
@@ -141,19 +141,23 @@ export default function HakkimizdaPage() {
             <p className="section-subheading">Büyüme ve başarı ile dolu yıllar</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {timeline.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-light font-bold text-lg">{index + 1}</span>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {timeline.map((item, index) => (
+                <div key={index} className="relative">
+                  <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+                        <span className="text-light font-bold text-xl">{index + 1}</span>
+                      </div>
+                      <div className="text-4xl font-bold text-primary">{item.year}</div>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3 text-dark">{item.title}</h3>
+                    <p className="text-grey leading-relaxed">{item.description}</p>
                   </div>
-                  <div className="text-3xl font-bold text-primary">{item.year}</div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-grey text-sm">{item.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
