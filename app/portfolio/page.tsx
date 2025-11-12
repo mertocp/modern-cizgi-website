@@ -130,13 +130,13 @@ export default function PortfolioPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 
                 <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="space-y-2">
-                    <div className="inline-block px-2.5 py-0.5 bg-primary rounded-full text-xs font-normal text-light">
+                  <div className="flex flex-col gap-2 items-start">
+                    <span className="px-2.5 py-0.5 bg-primary rounded-full text-xs font-normal text-light">
                       {project.standType}
-                    </div>
-                    <h3 className="text-lg font-normal text-light backdrop-blur-sm bg-dark/20 px-3 py-1 rounded inline-block">
+                    </span>
+                    <span className="text-base font-normal text-light backdrop-blur-sm bg-dark/20 px-3 py-1 rounded-full">
                       {project.title} - {project.country}
-                    </h3>
+                    </span>
                     <p className="text-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {project.city} • {project.size}
                     </p>
