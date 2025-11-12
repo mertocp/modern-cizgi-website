@@ -97,25 +97,25 @@ const values = [
 
 const clientLogos = [
   // Row 1
-  { name: 'Eraco', logo: '/images/references/eraco.png' },
-  { name: 'FSN Medical Technologies', logo: '/images/references/fsn.png' },
-  { name: 'GLORE', logo: '/images/references/glore.png' },
-  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg' },
-  { name: 'Benetton', logo: '/images/references/benetton.png' },
+  { name: 'Eraco', logo: '/images/references/eraco.png', width: 140, height: 70 },
+  { name: 'FSN Medical Technologies', logo: '/images/references/fsn.png', width: 140, height: 70 },
+  { name: 'GLORE', logo: '/images/references/glore.png', width: 130, height: 70 },
+  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg', width: 160, height: 80 },
+  { name: 'Benetton', logo: '/images/references/benetton.png', width: 140, height: 70 },
   
   // Row 2
-  { name: 'Giza Carpet', logo: '/images/references/giza.png' },
-  { name: 'Star Alüminyum', logo: '/images/references/star.png' },
-  { name: 'Özaktaç', logo: '/images/references/ozaktac.png' },
-  { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png' },
-  { name: 'Kron', logo: '/images/references/kron.png' },
+  { name: 'Giza Carpet', logo: '/images/references/giza.png', width: 140, height: 70 },
+  { name: 'Star Alüminyum', logo: '/images/references/star.png', width: 140, height: 70 },
+  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 140, height: 70 },
+  { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png', width: 140, height: 70 },
+  { name: 'Kron', logo: '/images/references/kron.png', width: 160, height: 80 },
   
   // Row 3
-  { name: 'Orma', logo: '/images/references/orma.png' },
-  { name: 'Kareban', logo: '/images/references/kareban.png' },
-  { name: 'Arco Irisa', logo: '/images/references/arcoirisa.jpg' },
-  { name: 'DVT Devotrans', logo: '/images/references/dvt.jpg' },
-  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png' },
+  { name: 'Orma', logo: '/images/references/orma.png', width: 140, height: 70 },
+  { name: 'Kareban', logo: '/images/references/kareban.png', width: 140, height: 70 },
+  { name: 'Arco Irisa', logo: '/images/references/arcoirisa.jpg', width: 140, height: 70 },
+  { name: 'DVT Devotrans', logo: '/images/references/dvt.jpg', width: 140, height: 70 },
+  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 140, height: 70 },
 ]
 
 export default function HakkimizdaPage() {
@@ -226,15 +226,18 @@ export default function HakkimizdaPage() {
               {clientLogos.map((client, index) => (
                 <div 
                   key={index} 
-                  className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
+                  className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[120px]"
                 >
-                  <Image
-                    src={client.logo}
-                    alt={`${client.name} logo`}
-                    width={140}
-                    height={70}
-                    className="object-contain"
-                  />
+                  <div className="relative w-full h-[70px] flex items-center justify-center">
+                    <Image
+                      src={client.logo}
+                      alt={`${client.name} logo`}
+                      width={client.width || 140}
+                      height={client.height || 70}
+                      className="object-contain max-h-[70px]"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
