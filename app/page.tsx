@@ -163,6 +163,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Final CTA */}
+      <section className="py-24 bg-primary text-light">
+        <div className="container text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Bir Sonraki Fuarınız İçin Hazır mısınız?
+          </h2>
+          <p className="text-xl mb-12 max-w-2xl mx-auto text-light/90">
+            Markanızı öne çıkaracak, etkileyici bir fuar standı için bugün iletişime geçin
+          </p>
+          <Link href="/iletisim" className="inline-flex items-center gap-2 bg-light text-primary px-10 py-5 rounded-lg font-bold text-lg hover:bg-light/90 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            İletişim
+            <ArrowRight className="w-6 h-6" />
+          </Link>
+        </div>
+      </section>
     </>
   )
 }
