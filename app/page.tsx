@@ -132,7 +132,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Clients Preview */}
+      {/* Clients Preview - UPDATED WITH ENLARGED LOGOS */}
       <section className="py-24 bg-light-grey">
         <div className="container">
           <div className="text-center mb-16">
@@ -147,15 +147,15 @@ export default function Home() {
               {clientLogos.map((client, index) => (
                 <div 
                   key={index} 
-                  className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[120px]"
+                  className="flex items-center justify-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 min-h-[140px]"
                 >
-                  <div className="relative w-full h-[70px] flex items-center justify-center">
+                  <div className="relative w-full h-[90px] flex items-center justify-center">
                     <Image
                       src={client.logo}
                       alt={`${client.name} logo`}
-                      width={client.width || 140}
-                      height={client.height || 70}
-                      className="object-contain max-h-[70px]"
+                      width={client.width}
+                      height={client.height}
+                      className="object-contain max-h-[90px]"
                       style={{ maxWidth: '100%' }}
                     />
                   </div>
@@ -210,25 +210,26 @@ const servicesPreview = [
   },
 ]
 
+// UPDATED: Enlarged logos 30-40% and fixed Benetton
 const clientLogos = [
-  // Row 1
-  { name: 'Eraco', logo: '/images/references/eraco.png', width: 140, height: 70 },
-  { name: 'FSN Medical Technologies', logo: '/images/references/fsn.png', width: 140, height: 70 },
-  { name: 'GLORE', logo: '/images/references/glore.png', width: 130, height: 70 },
-  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg', width: 160, height: 80 },
-  { name: 'Benetton', logo: '/images/references/benetton.png', width: 140, height: 70 },
+  // Row 1 - Increased from 140x70 to 180x90 (29% larger)
+  { name: 'Eraco', logo: '/images/references/eraco.png', width: 180, height: 90 },
+  { name: 'FSN Medical Technologies', logo: '/images/references/fsn.png', width: 180, height: 90 },
+  { name: 'GLORE', logo: '/images/references/glore.png', width: 170, height: 90 }, // Slightly smaller for height balance
+  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg', width: 200, height: 100 }, // Increased from 160x80 to 200x100
+  { name: 'Benetton', logo: '/images/references/benetton.png', width: 180, height: 90 }, // FIXED: Now uses solid green version
   
   // Row 2
-  { name: 'Giza Carpet', logo: '/images/references/giza.png', width: 140, height: 70 },
-  { name: 'Star Alüminyum', logo: '/images/references/star.png', width: 140, height: 70 },
-  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 140, height: 70 },
-  { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png', width: 140, height: 70 },
-  { name: 'Kron', logo: '/images/references/kron.png', width: 160, height: 80 },
+  { name: 'Giza Carpet', logo: '/images/references/giza.png', width: 180, height: 90 },
+  { name: 'Star Alüminyum', logo: '/images/references/star.png', width: 180, height: 90 },
+  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 180, height: 90 },
+  { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png', width: 180, height: 90 },
+  { name: 'Kron', logo: '/images/references/kron.png', width: 200, height: 100 }, // Increased from 160x80 to 200x100
   
   // Row 3
-  { name: 'Orma', logo: '/images/references/orma.png', width: 140, height: 70 },
-  { name: 'Kareban', logo: '/images/references/kareban.png', width: 140, height: 70 },
-  { name: 'Arco Irisa', logo: '/images/references/arcoirisa.jpg', width: 140, height: 70 },
-  { name: 'DVT Devotrans', logo: '/images/references/dvt.jpg', width: 140, height: 70 },
-  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 140, height: 70 },
+  { name: 'Orma', logo: '/images/references/orma.png', width: 180, height: 90 },
+  { name: 'Kareban', logo: '/images/references/kareban.png', width: 180, height: 90 },
+  { name: 'Arco Irisa', logo: '/images/references/arcoirisa.jpg', width: 180, height: 90 },
+  { name: 'DVT Devotrans', logo: '/images/references/dvt.jpg', width: 180, height: 90 },
+  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 180, height: 90 },
 ]
