@@ -56,8 +56,8 @@ export default function Navigation() {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-dark">
-                Modern Çizgi <span className="text-primary">Mimarlık</span>
+              <span className="text-2xl font-bold text-primary">
+                Modern Çizgi Mimarlık
               </span>
             </Link>
 

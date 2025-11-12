@@ -8,8 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              Modern Çizgi <span className="text-primary">Mimarlık</span>
+            <h3 className="text-2xl font-bold mb-4 text-primary">
+              Modern Çizgi Mimarlık
             </h3>
             <p className="text-light/80 mb-6">
               Fuarlarda markanızı öne çıkaran, profesyonel ve etkileyici stand çözümleri sunuyoruz.
@@ -115,7 +115,7 @@ export default function Footer() {
 
         <div className="border-t border-light/20 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-light/60 text-sm mb-4 md:mb-0">
-            © 2024 Modern Çizgi Mimarlık. Tüm hakları saklıdır.
+            © 2025 Modern Çizgi Mimarlık. Tüm hakları saklıdır.
           </p>
           <div className="flex space-x-6 text-sm text-light/60">
             <Link href="/gizlilik-politikasi" className="hover:text-primary transition-colors">
