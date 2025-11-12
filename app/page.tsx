@@ -42,20 +42,20 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
-              <div className="text-5xl font-bold text-primary">15+</div>
-              <p className="text-grey">Yıllık Deneyim</p>
+              <div className="text-5xl font-bold text-primary">2500+</div>
+              <p className="text-grey">Tamamlanan Stand</p>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl font-bold text-primary">500+</div>
-              <p className="text-grey">Tamamlanan Proje</p>
+              <div className="text-5xl font-bold text-primary">22+ Yıl</div>
+              <p className="text-grey">Sektör Deneyimi</p>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl font-bold text-primary">25+</div>
-              <p className="text-grey">Ülkede Hizmet</p>
+              <div className="text-5xl font-bold text-primary">7 Ülke</div>
+              <p className="text-grey">Uluslararası Hizmet</p>
             </div>
             <div className="space-y-2">
-              <div className="text-5xl font-bold text-primary">%98</div>
-              <p className="text-grey">Müşteri Memnuniyeti</p>
+              <div className="text-5xl font-bold text-primary">250.000 m²</div>
+              <p className="text-grey">Toplam Proje Hacmi</p>
             </div>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <Link href="/hakkimizda#referanslar" className="btn-primary inline-flex items-center gap-2">
+            <Link href="/hakkimizda" className="btn-primary inline-flex items-center gap-2">
               Daha Fazla Referans
               <ArrowRight className="w-5 h-5" />
             </Link>
