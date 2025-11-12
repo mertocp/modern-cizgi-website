@@ -68,7 +68,7 @@ const projects = [
   },
 ]
 
-const standTypes = ['Tümü', 'Yıldız', 'Ahşap', 'Maxima', 'Modüler']
+const standTypes = ['Tümü', 'Yıldız', 'Ahşap', 'Maxima']
 
 export default function PortfolioPage() {
   const [selectedStandType, setSelectedStandType] = useState('Tümü')
@@ -131,10 +131,10 @@ export default function PortfolioPage() {
                 
                 <div className="absolute inset-0 p-6 flex flex-col justify-end translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
                   <div className="space-y-2 text-light">
-                    <div className="inline-block px-2.5 py-0.5 bg-grey/30 backdrop-blur-sm rounded-full text-xs font-normal mb-2 text-light/80">
+                    <div className="inline-block px-2.5 py-0.5 bg-primary rounded-full text-xs font-normal mb-2 text-light">
                       {project.standType}
                     </div>
-                    <h3 className="text-2xl font-bold text-primary">{project.title} - {project.country}</h3>
+                    <h3 className="text-lg font-normal text-primary backdrop-blur-sm bg-dark/20 inline-block px-3 py-1 rounded">{project.title} - {project.country}</h3>
                     <p className="text-light text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {project.city} • {project.size}
                     </p>
@@ -169,7 +169,7 @@ export default function PortfolioPage() {
             
             <div className="bg-white rounded-lg p-8">
               <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 bg-grey/20 rounded-full text-xs font-normal text-dark-grey">
+                <span className="px-3 py-1 bg-primary rounded-full text-xs font-normal text-light">
                   {selectedProject.standType}
                 </span>
                 <span className="text-grey">{selectedProject.city}, {selectedProject.country}</span>
