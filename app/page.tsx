@@ -216,13 +216,13 @@ const clientLogos = [
   { name: 'Eraco', logo: '/images/references/eraco.png', width: 180, height: 90 },
   { name: 'FSN Medical Technologies', logo: '/images/references/fsn.png', width: 180, height: 90 },
   { name: 'GLORE', logo: '/images/references/glore.png', width: 170, height: 90 },
-  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg', width: 250, height: 125 }, // INCREASED AGAIN - Extra large
+  { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg', width: 320, height: 160 }, // MUCH LARGER - Compensates for internal whitespace
   { name: 'Benetton', logo: '/images/references/benetton.png', width: 180, height: 90 },
   
   // Row 2
   { name: 'Giza Carpet', logo: '/images/references/giza.png', width: 180, height: 90 },
   { name: 'Star Alüminyum', logo: '/images/references/star.png', width: 180, height: 90 },
-  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 240, height: 120 }, // INCREASED AGAIN - Extra large
+  { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 300, height: 150 }, // MUCH LARGER - Compensates for internal whitespace
   { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png', width: 180, height: 90 },
   { name: 'Kron', logo: '/images/references/kron.png', width: 200, height: 100 },
   
@@ -231,5 +231,5 @@ const clientLogos = [
   { name: 'Kareban', logo: '/images/references/kareban.png', width: 180, height: 90 },
   { name: 'Arco Irisa', logo: '/images/references/arcoirisa.jpg', width: 180, height: 90 },
   { name: 'DVT Devotrans', logo: '/images/references/dvt.jpg', width: 180, height: 90 },
-  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 240, height: 120 }, // INCREASED AGAIN - Extra large
+  { name: 'One Click Profit', logo: '/images/references/oneclickprofit.png', width: 300, height: 150 }, // MUCH LARGER - Compensates for internal whitespace
 ]
