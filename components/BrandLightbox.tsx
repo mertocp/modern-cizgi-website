@@ -35,6 +35,23 @@ export default function BrandLightbox({ brand, onClose }: BrandLightboxProps) {
     }
   }, [currentIndex])
 
+  // Preload next and previous images for smoother transitions
+  useEffect(() => {
+    const nextIndex = (currentIndex + 1) % brand.photos.length
+    const prevIndex = currentIndex === 0 ? brand.photos.length - 1 : currentIndex - 1
+
+    const preloadImage = (src: string) => {
+      const img = new window.Image()
+      img.src = src
+    }
+
+    // Only preload if there are multiple photos
+    if (brand.photos.length > 1) {
+      preloadImage(brand.photos[nextIndex])
+      preloadImage(brand.photos[prevIndex])
+    }
+  }, [currentIndex, brand.photos])
+
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev > 0 ? prev - 1 : brand.photos.length - 1))
   }
@@ -90,7 +107,7 @@ export default function BrandLightbox({ brand, onClose }: BrandLightboxProps) {
             src={brand.photos[currentIndex]}
             alt={`${brand.name} - ${currentIndex + 1}`}
             fill
-            className="object-contain"
+            className="object-contain transition-transform duration-200 ease-out will-change-transform"
             priority
           />
 
@@ -98,7 +115,7 @@ export default function BrandLightbox({ brand, onClose }: BrandLightboxProps) {
             <>
               <button
                 onClick={handlePrev}
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-dark/80 hover:bg-dark rounded-full flex items-center justify-center text-light transition-colors"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-dark/80 hover:bg-dark rounded-full flex items-center justify-center text-light transition-all duration-150 ease-out hover:scale-110"
                 aria-label="Previous"
               >
                 <ChevronLeft className="w-6 h-6" />
@@ -106,7 +123,7 @@ export default function BrandLightbox({ brand, onClose }: BrandLightboxProps) {
 
               <button
                 onClick={handleNext}
-                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-dark/80 hover:bg-dark rounded-full flex items-center justify-center text-light transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-dark/80 hover:bg-dark rounded-full flex items-center justify-center text-light transition-all duration-150 ease-out hover:scale-110"
                 aria-label="Next"
               >
                 <ChevronRight className="w-6 h-6" />

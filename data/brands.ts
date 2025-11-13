@@ -20,7 +20,7 @@ export const brands: Brand[] = [
     id: 2,
     name: 'Arco Irisa',
     slug: 'arco-irisa',
-    photos: ['/images/brands/arco-irisa/01.jpg', '/images/brands/arco-irisa/02.jpg', '/images/brands/arco-irisa/03.jpg', '/images/brands/arco-irisa/04.jpg', '/images/brands/arco-irisa/05.jpg', '/images/brands/arco-irisa/06.jpg', '/images/brands/arco-irisa/07.jpg', '/images/brands/arco-irisa/08.jpg', '/images/brands/arco-irisa/09.jpg', '/images/brands/arco-irisa/10.jpg', '/images/brands/arco-irisa/11.jpg', '/images/brands/arco-irisa/12.jpg', '/images/brands/arco-irisa/13.jpg', '/images/brands/arco-irisa/14.jpg', '/images/brands/arco-irisa/15.jpg', '/images/brands/arco-irisa/16.jpg', '/images/brands/arco-irisa/17.jpg', '/images/brands/arco-irisa/18.jpg', '/images/brands/arco-irisa/19.jpg'],
+    photos: ['/images/brands/arco-irisa/14.jpg', '/images/brands/arco-irisa/01.jpg', '/images/brands/arco-irisa/02.jpg', '/images/brands/arco-irisa/03.jpg', '/images/brands/arco-irisa/04.jpg', '/images/brands/arco-irisa/05.jpg', '/images/brands/arco-irisa/06.jpg', '/images/brands/arco-irisa/07.jpg', '/images/brands/arco-irisa/08.jpg', '/images/brands/arco-irisa/09.jpg', '/images/brands/arco-irisa/10.jpg', '/images/brands/arco-irisa/11.jpg', '/images/brands/arco-irisa/12.jpg', '/images/brands/arco-irisa/13.jpg', '/images/brands/arco-irisa/15.jpg', '/images/brands/arco-irisa/16.jpg', '/images/brands/arco-irisa/17.jpg', '/images/brands/arco-irisa/18.jpg', '/images/brands/arco-irisa/19.jpg'],
     description: 'Modern fuar standı tasarımı',
     featured: true
   },
@@ -116,7 +116,7 @@ export const brands: Brand[] = [
     id: 14,
     name: 'Kareban',
     slug: 'kareban',
-    photos: ['/images/brands/kareban/01.jpg', '/images/brands/kareban/02.jpg', '/images/brands/kareban/03.jpg', '/images/brands/kareban/04.jpg', '/images/brands/kareban/05.jpg', '/images/brands/kareban/06.jpg', '/images/brands/kareban/07.jpg', '/images/brands/kareban/08.jpg', '/images/brands/kareban/09.jpg', '/images/brands/kareban/10.jpg', '/images/brands/kareban/11.jpg', '/images/brands/kareban/12.jpg', '/images/brands/kareban/13.jpg'],
+    photos: ['/images/brands/kareban/05.jpg', '/images/brands/kareban/01.jpg', '/images/brands/kareban/02.jpg', '/images/brands/kareban/03.jpg', '/images/brands/kareban/04.jpg', '/images/brands/kareban/06.jpg', '/images/brands/kareban/07.jpg', '/images/brands/kareban/08.jpg', '/images/brands/kareban/09.jpg', '/images/brands/kareban/10.jpg', '/images/brands/kareban/11.jpg', '/images/brands/kareban/12.jpg', '/images/brands/kareban/13.jpg'],
     description: 'Fuar standı tasarımı',
     featured: true
   },
