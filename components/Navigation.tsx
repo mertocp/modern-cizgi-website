@@ -55,8 +55,11 @@ export default function Navigation() {
       >
         <div className="container">
           <div className="flex items-center justify-between h-20">
-            {/* Logo - UPDATED WITH IMAGE */}
-            <Link href="/" className="flex items-center space-x-3">
+            {/* Logo with Dark Background Container - UPDATED */}
+            <Link 
+              href="/" 
+              className="flex items-center space-x-3 bg-dark px-6 py-3 rounded-lg hover:bg-dark/90 transition-colors"
+            >
               <Image
                 src="/mcmlogo.png"
                 alt="Modern Çizgi Mimarlık Logo"

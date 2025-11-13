@@ -84,37 +84,48 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact - UPDATED WITH NEW INFO AND DUAL ADDRESSES */}
+          {/* Contact - UPDATED: Better Layout */}
           <div>
             <h4 className="text-lg font-bold mb-4">İletişim</h4>
             <div className="space-y-4">
+              {/* Phone */}
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <div className="text-light/80">
+                <div className="text-light/80 text-sm">
                   <p>+90 538 405 3370</p>
                   <p>+90 212 452 9359</p>
                 </div>
               </div>
+
+              {/* Email */}
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <div className="text-light/80">
+                <div className="text-light/80 text-sm">
                   <p>info@moderncizgimimarlik.com</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <div className="text-light/80 space-y-3">
+
+              {/* Addresses - Better Layout */}
+              <div className="space-y-4">
+                {/* Turkey Office */}
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-primary mb-1">🇹🇷 Türkiye Ofisi</p>
-                    <p className="text-sm">
-                      Cihangir, Şht. P.Er Yavuz Bahar Sk. No:27,<br />
-                      34310 Avcılar/İstanbul, Türkiye
+                    <p className="font-semibold text-primary text-sm mb-1">🇹🇷 Türkiye Ofisi</p>
+                    <p className="text-light/80 text-xs leading-relaxed">
+                      Cihangir, Şht. P.Er Yavuz Bahar Sk. No:27,
+                      34310 Avcılar/İstanbul
                     </p>
                   </div>
+                </div>
+
+                {/* Germany Office */}
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <p className="font-semibold text-primary mb-1">🇩🇪 Almanya Ofisi</p>
-                    <p className="text-sm">
-                      Am Kühlturm 27,<br />
+                    <p className="font-semibold text-primary text-sm mb-1">🇩🇪 Almanya Ofisi</p>
+                    <p className="text-light/80 text-xs leading-relaxed">
+                      Am Kühlturm 27,
                       44536 Lünen, Germany
                     </p>
                   </div>
