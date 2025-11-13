@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Award, Users, Globe, TrendingUp, CheckCircle, Calendar, Maximize2 } from 'lucide-react'
+import { getFeaturedBrands } from '@/data/brands'
 
 export default function Home() {
   return (
@@ -124,28 +125,34 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {portfolioPreview.map((project, index) => (
-              <div key={index} className="relative aspect-[4/3] rounded-lg overflow-hidden group cursor-pointer">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {getFeaturedBrands().map((brand) => (
+              <Link
+                key={brand.id}
+                href="/portfolio"
+                className="group relative aspect-[4/3] rounded-lg overflow-hidden"
+              >
                 <Image
-                  src={project.image}
-                  alt={project.title}
+                  src={brand.photos[0]}
+                  alt={brand.name}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-6 w-full">
-                    <h3 className="text-xl font-bold mb-2 text-primary">{project.title}</h3>
-                    <p className="text-light/80 text-sm">{project.description}</p>
+                    <h3 className="text-xl font-bold mb-2 text-primary">
+                      {brand.name}
+                    </h3>
+                    <p className="text-light/80 text-sm">{brand.description}</p>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
           <div className="text-center">
             <Link href="/portfolio" className="btn-secondary inline-flex items-center gap-2">
-              Tüm Projeleri İncele
+              Daha Fazla Proje
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -228,40 +235,6 @@ const servicesPreview = [
     icon: Globe,
     title: 'Uluslararası Hizmet',
     description: 'Avrupa ve dünya çapında profesyonel fuar standı hizmetleri.',
-  },
-]
-
-// Portfolio preview items for homepage
-const portfolioPreview = [
-  {
-    image: '/images/portfolio/portfolio-01-strada.jpg',
-    title: 'Strada Fuar Standı',
-    description: 'Modern ve şık fuar standı tasarımı'
-  },
-  {
-    image: '/images/portfolio/portfolio-02-pierre-cardin.jpg',
-    title: 'Pierre Cardin',
-    description: 'Premium marka standı'
-  },
-  {
-    image: '/images/portfolio/portfolio-03-kareban.jpg',
-    title: 'Kareban Fuar Standı',
-    description: 'Özel tasarım fuar standı'
-  },
-  {
-    image: '/images/portfolio/portfolio-04-arco-alt.jpg',
-    title: 'Arco Alternatif Görünüm',
-    description: 'Modern fuar standı konsepti'
-  },
-  {
-    image: '/images/portfolio/portfolio-05-eraco.jpg',
-    title: 'Eraco Fuar Standı',
-    description: 'Endüstriyel fuar standı çözümü'
-  },
-  {
-    image: '/images/portfolio/portfolio-06-mobelkant.jpg',
-    title: 'Möbelkant',
-    description: 'Mobilya fuarı standı tasarımı'
   },
 ]
 
