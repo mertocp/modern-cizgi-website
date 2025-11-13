@@ -33,7 +33,7 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Top Bar */}
+      {/* Top Bar - Keep as is */}
       <div className="bg-dark text-light py-2 hidden md:block">
         <div className="container flex justify-end items-center gap-6 text-sm">
           <a href="tel:+902125550123" className="flex items-center gap-2 hover:text-primary transition-colors">
@@ -47,57 +47,57 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Main Navigation */}
+      {/* Main Navigation - BLACK BACKGROUND */}
       <nav
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-lg' : 'bg-white'
+        className={`sticky top-0 z-50 bg-dark transition-all duration-300 ${
+          isScrolled ? 'shadow-lg' : ''
         }`}
       >
         <div className="container">
           <div className="flex items-center justify-between h-20">
-            {/* Logo with Shadow ONLY on Logo Image - NEW */}
+            {/* Logo - White Text on Black Background */}
             <Link 
               href="/" 
               className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
             >
-              <div style={{
-                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3)) drop-shadow(0 0 8px rgba(255,107,53,0.3))'
-              }}>
-                <Image
-                  src="/mcmlogo.png"
-                  alt="Modern Çizgi Mimarlık Logo"
-                  width={50}
-                  height={50}
-                  className="object-contain"
-                />
-              </div>
-              <span className="text-2xl font-bold text-primary">
+              <Image
+                src="/mcmlogo.png"
+                alt="Modern Çizgi Mimarlık Logo"
+                width={50}
+                height={50}
+                className="object-contain"
+              />
+              <span className="text-2xl font-bold text-light">
                 Modern Çizgi Mimarlık
               </span>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - WHITE TEXT */}
             <div className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={`font-medium transition-colors hover:text-primary ${
-                    pathname === link.href ? 'text-primary' : 'text-dark'
+                    pathname === link.href ? 'text-primary' : 'text-light'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link href="/iletisim" className="btn-primary !py-3 !px-6">
+              {/* ORANGE BUTTON with WHITE TEXT */}
+              <Link 
+                href="/iletisim" 
+                className="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition-all duration-300 hover:scale-105"
+              >
                 Teklif Al
               </Link>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Menu Button - WHITE */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-light-grey transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-dark-grey transition-colors text-light"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -105,22 +105,25 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - BLACK BACKGROUND */}
         {isOpen && (
-          <div className="lg:hidden border-t border-light-grey-2 bg-white">
+          <div className="lg:hidden border-t border-light/20 bg-dark">
             <div className="container py-4 space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={`block py-2 font-medium transition-colors hover:text-primary ${
-                    pathname === link.href ? 'text-primary' : 'text-dark'
+                    pathname === link.href ? 'text-primary' : 'text-light'
                   }`}
                 >
                   {link.label}
                 </Link>
               ))}
-              <Link href="/iletisim" className="btn-primary block text-center mt-4">
+              <Link 
+                href="/iletisim" 
+                className="bg-primary text-white block text-center mt-4 px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition-all"
+              >
                 Teklif Al
               </Link>
             </div>
