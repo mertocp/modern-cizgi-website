@@ -55,13 +55,10 @@ export default function Navigation() {
       >
         <div className="container">
           <div className="flex items-center justify-between h-20">
-            {/* Logo with White Border & Shadow - OPTION 2 */}
+            {/* Logo with Orange Left Border - OPTION 3 */}
             <Link 
               href="/" 
-              className="flex items-center space-x-3 px-4 py-2 border-2 border-white rounded-lg shadow-md hover:shadow-lg transition-all"
-              style={{
-                boxShadow: '0 2px 8px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05)'
-              }}
+              className="flex items-center space-x-3 px-4 py-2 border-l-4 border-primary bg-light-grey/30 rounded-r-lg hover:bg-light-grey/50 transition-all"
             >
               <Image
                 src="/mcmlogo.png"
