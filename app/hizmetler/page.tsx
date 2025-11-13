@@ -113,7 +113,7 @@ export default function HizmetlerPage() {
       <section className="relative py-24 text-light">
         <div className="absolute inset-0">
           <Image
-            src="/images/backgrounds/bg-services.jpg"
+            src="/images/backgrounds/bg-kilim.jpg"
             alt="Hizmetlerimiz"
             fill
             className="object-cover"

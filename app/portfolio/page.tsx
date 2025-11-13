@@ -17,7 +17,7 @@ export default function PortfolioPage() {
       <section className="relative py-24 text-light">
         <div className="absolute inset-0">
           <Image
-            src="/images/backgrounds/bg-projects.jpg"
+            src="/images/backgrounds/bg-pierre-cardin.jpg"
             alt="Fuar standı projeleri"
             fill
             className="object-cover"
