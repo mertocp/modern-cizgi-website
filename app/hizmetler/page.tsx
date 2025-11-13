@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight, Lightbulb, Hammer, LayoutGrid, Box, Wrench, Globe, CheckCircle2, TreeDeciduous, Award } from 'lucide-react'
 
 export const metadata = {
@@ -109,8 +110,17 @@ export default function HizmetlerPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-dark via-dark-grey to-dark text-light">
-        <div className="container text-center">
+      <section className="relative py-24 text-light">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/backgrounds/bg-services.jpg"
+            alt="Hizmetlerimiz"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/65" />
+        </div>
+        <div className="relative z-10 container text-center">
           <h1 className="section-heading text-light mb-6">Hizmetlerimiz</h1>
           <p className="section-subheading text-light/90 max-w-3xl mx-auto">
             İhtiyacınıza özel, kapsamlı fuar standı çözümleri ile başarıya ulaşın

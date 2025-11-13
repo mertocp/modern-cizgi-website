@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
 
 export default function IletisimPage() {
@@ -50,8 +51,17 @@ export default function IletisimPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-dark via-dark-grey to-dark text-light">
-        <div className="container text-center">
+      <section className="relative py-24 text-light">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/backgrounds/bg-contact.jpg"
+            alt="İletişim"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="relative z-10 container text-center">
           <h1 className="section-heading text-light mb-6">İletişim</h1>
           <p className="section-subheading text-light/90 max-w-3xl mx-auto">
             Fuar standı projeniz için ücretsiz danışmanlık ve teklif almak üzere bizimle iletişime geçin

@@ -123,8 +123,17 @@ export default function HakkimizdaPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-dark via-dark-grey to-dark text-light">
-        <div className="container text-center">
+      <section className="relative py-24 text-light">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/backgrounds/bg-about.jpg"
+            alt="Hakkımızda"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/60" />
+        </div>
+        <div className="relative z-10 container text-center">
           <h1 className="section-heading text-light mb-6">Fuar Standı Sektörünün 22 Yıllık Öncüsü</h1>
           <p className="section-subheading text-light/90 max-w-3xl mx-auto">
             2004'ten bugüne 2500+ projeyle markaların fuarlardaki başarı ortağı

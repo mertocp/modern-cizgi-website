@@ -9,8 +9,8 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-exhibition-stand.jpg"
-            alt="Modern exhibition stand"
+            src="/images/hero/hero-arco-irisa.jpg"
+            alt="Modern Arco Irisa fuar standı"
             fill
             className="object-cover"
             priority
@@ -125,18 +125,18 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {[1, 2, 3, 4, 5, 6].map((num) => (
-              <div key={num} className="relative aspect-[4/3] rounded-lg overflow-hidden group cursor-pointer">
+            {portfolioPreview.map((project, index) => (
+              <div key={index} className="relative aspect-[4/3] rounded-lg overflow-hidden group cursor-pointer">
                 <Image
-                  src={`/images/portfolio${num}.jpg`}
-                  alt={`Project ${num}`}
+                  src={project.image}
+                  alt={project.title}
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-6 w-full">
-                    <h3 className="text-xl font-bold mb-2 text-primary">Proje {num}</h3>
-                    <p className="text-light/80 text-sm">Fuar Standı Tasarımı</p>
+                    <h3 className="text-xl font-bold mb-2 text-primary">{project.title}</h3>
+                    <p className="text-light/80 text-sm">{project.description}</p>
                   </div>
                 </div>
               </div>
@@ -231,6 +231,40 @@ const servicesPreview = [
   },
 ]
 
+// Portfolio preview items for homepage
+const portfolioPreview = [
+  {
+    image: '/images/portfolio/portfolio-01-strada.jpg',
+    title: 'Strada Fuar Standı',
+    description: 'Modern ve şık fuar standı tasarımı'
+  },
+  {
+    image: '/images/portfolio/portfolio-02-pierre-cardin.jpg',
+    title: 'Pierre Cardin',
+    description: 'Premium marka standı'
+  },
+  {
+    image: '/images/portfolio/portfolio-03-kareban.jpg',
+    title: 'Kareban Fuar Standı',
+    description: 'Özel tasarım fuar standı'
+  },
+  {
+    image: '/images/portfolio/portfolio-04-arco-alt.jpg',
+    title: 'Arco Alternatif Görünüm',
+    description: 'Modern fuar standı konsepti'
+  },
+  {
+    image: '/images/portfolio/portfolio-05-eraco.jpg',
+    title: 'Eraco Fuar Standı',
+    description: 'Endüstriyel fuar standı çözümü'
+  },
+  {
+    image: '/images/portfolio/portfolio-06-mobelkant.jpg',
+    title: 'Möbelkant',
+    description: 'Mobilya fuarı standı tasarımı'
+  },
+]
+
 // UPDATED: Özaktaç, Kilim, and One Click Profit enlarged even more
 const clientLogos = [
   // Row 1
@@ -239,14 +273,14 @@ const clientLogos = [
   { name: 'GLORE', logo: '/images/references/glore.png', width: 170, height: 90 },
   { name: 'Kilim Mobilya', logo: '/images/references/kilim.jpg', width: 320, height: 160 }, // MUCH LARGER - Compensates for internal whitespace
   { name: 'Benetton', logo: '/images/references/benetton.png', width: 180, height: 90 },
-  
+
   // Row 2
   { name: 'Giza Carpet', logo: '/images/references/giza.png', width: 180, height: 90 },
   { name: 'Star Alüminyum', logo: '/images/references/star.png', width: 180, height: 90 },
   { name: 'Özaktaç', logo: '/images/references/ozaktac.png', width: 300, height: 150 }, // MUCH LARGER - Compensates for internal whitespace
   { name: 'Pierre Cardin', logo: '/images/references/pierrecardin.png', width: 180, height: 90 },
   { name: 'Kron', logo: '/images/references/kron.png', width: 200, height: 100 },
-  
+
   // Row 3
   { name: 'Orma', logo: '/images/references/orma.png', width: 180, height: 90 },
   { name: 'Kareban', logo: '/images/references/kareban.png', width: 180, height: 90 },
