@@ -55,12 +55,12 @@ export default function Navigation() {
       >
         <div className="container">
           <div className="flex items-center justify-between h-20">
-            {/* Logo with Subtle Shadow - OPTION 1 (RECOMMENDED) */}
+            {/* Logo with White Border & Shadow - OPTION 2 */}
             <Link 
               href="/" 
-              className="flex items-center space-x-3 py-2 hover:opacity-90 transition-opacity"
+              className="flex items-center space-x-3 px-4 py-2 border-2 border-white rounded-lg shadow-md hover:shadow-lg transition-all"
               style={{
-                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3)) drop-shadow(0 0 8px rgba(255,107,53,0.2))'
+                boxShadow: '0 2px 8px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05)'
               }}
             >
               <Image
