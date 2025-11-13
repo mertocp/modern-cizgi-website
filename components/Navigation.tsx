@@ -55,10 +55,13 @@ export default function Navigation() {
       >
         <div className="container">
           <div className="flex items-center justify-between h-20">
-            {/* Logo with Dark Background Container - UPDATED */}
+            {/* Logo with Subtle Shadow - OPTION 1 (RECOMMENDED) */}
             <Link 
               href="/" 
-              className="flex items-center space-x-3 bg-dark px-6 py-3 rounded-lg hover:bg-dark/90 transition-colors"
+              className="flex items-center space-x-3 py-2 hover:opacity-90 transition-opacity"
+              style={{
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3)) drop-shadow(0 0 8px rgba(255,107,53,0.2))'
+              }}
             >
               <Image
                 src="/mcmlogo.png"
