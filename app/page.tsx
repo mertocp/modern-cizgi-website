@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Award, Users, Globe, TrendingUp } from 'lucide-react'
+import { ArrowRight, Award, Users, Globe, TrendingUp, CheckCircle, Calendar, Maximize2 } from 'lucide-react'
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section - UPDATED TEXT */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -20,10 +20,10 @@ export default function Home() {
 
         <div className="relative z-10 container text-center text-light py-32">
           <h1 className="section-heading text-light mb-6 animate-fade-in">
-            Fuar Katılımınızı Dönüştürün
+            Fuarı Markanız İçin Sahneye Çevirin
           </h1>
           <p className="section-subheading text-light/90 mb-12 animate-fade-in">
-            Markanızı öne çıkaran, unutulmaz fuar standları ile global pazarda yerinizi alın
+            Ziyaretçilerinize hatırlayacakları bir deneyim sunun.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in">
             <Link href="/iletisim" className="btn-primary inline-flex items-center justify-center gap-2">
@@ -37,23 +37,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick Stats */}
+      {/* Quick Stats - UPDATED WITH ICONS */}
       <section className="py-20 bg-light-grey">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="space-y-2">
+            <div className="space-y-3">
+              <div className="flex justify-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                  <CheckCircle className="w-8 h-8 text-primary" />
+                </div>
+              </div>
               <div className="text-5xl font-bold text-primary">2500+</div>
               <p className="text-grey">Tamamlanan Stand</p>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
+              <div className="flex justify-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                  <Calendar className="w-8 h-8 text-primary" />
+                </div>
+              </div>
               <div className="text-5xl font-bold text-primary">22+ Yıl</div>
               <p className="text-grey">Sektör Deneyimi</p>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
+              <div className="flex justify-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                  <Globe className="w-8 h-8 text-primary" />
+                </div>
+              </div>
               <div className="text-5xl font-bold text-primary">7 Ülke</div>
               <p className="text-grey">Uluslararası Hizmet</p>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
+              <div className="flex justify-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-2">
+                  <Maximize2 className="w-8 h-8 text-primary" />
+                </div>
+              </div>
               <div className="text-5xl font-bold text-primary whitespace-nowrap">
                 250.000 m²
               </div>
@@ -63,7 +83,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Preview */}
+      {/* Services Preview - UPDATED MAXIMA SISTEMLER */}
       <section className="py-24 bg-light">
         <div className="container">
           <div className="text-center mb-16">
@@ -192,6 +212,7 @@ export default function Home() {
   )
 }
 
+// UPDATED: Maxima Sistemler instead of Modüler Sistemler
 const servicesPreview = [
   {
     icon: Award,
@@ -200,8 +221,8 @@ const servicesPreview = [
   },
   {
     icon: Users,
-    title: 'Modüler Sistemler',
-    description: 'Esnek ve yeniden kullanılabilir modüler stand çözümleri.',
+    title: 'Maxima Sistemler',
+    description: 'Maxima modüler sistem çözümleri ile profesyonel ve ekonomik stand alternatifi.',
   },
   {
     icon: Globe,

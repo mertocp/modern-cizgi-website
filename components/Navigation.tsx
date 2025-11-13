@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Menu, X, Phone, Mail } from 'lucide-react'
 import { usePathname } from 'next/navigation'
@@ -54,8 +55,15 @@ export default function Navigation() {
       >
         <div className="container">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
+            {/* Logo - UPDATED WITH IMAGE */}
+            <Link href="/" className="flex items-center space-x-3">
+              <Image
+                src="/mcmlogo.png"
+                alt="Modern Çizgi Mimarlık Logo"
+                width={50}
+                height={50}
+                className="object-contain"
+              />
               <span className="text-2xl font-bold text-primary">
                 Modern Çizgi Mimarlık
               </span>

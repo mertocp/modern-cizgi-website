@@ -84,30 +84,41 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact - UPDATED WITH NEW INFO AND DUAL ADDRESSES */}
           <div>
             <h4 className="text-lg font-bold mb-4">İletişim</h4>
-            <div className="space-y-3">
+            <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <div className="text-light/80">
-                  <p>+90 212 555 0123</p>
-                  <p>+90 532 555 0123</p>
+                  <p>+90 538 405 3370</p>
+                  <p>+90 212 452 9359</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <div className="text-light/80">
-                  <p>info@moderncizgi.com</p>
-                  <p>sales@moderncizgi.com</p>
+                  <p>info@moderncizgimimarlik.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <p className="text-light/80">
-                  Atatürk Mah., Modern Plaza<br />
-                  Kat: 5, 34758 İstanbul, Türkiye
-                </p>
+                <div className="text-light/80 space-y-3">
+                  <div>
+                    <p className="font-semibold text-primary mb-1">🇹🇷 Türkiye Ofisi</p>
+                    <p className="text-sm">
+                      Cihangir, Şht. P.Er Yavuz Bahar Sk. No:27,<br />
+                      34310 Avcılar/İstanbul, Türkiye
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-primary mb-1">🇩🇪 Almanya Ofisi</p>
+                    <p className="text-sm">
+                      Am Kühlturm 27,<br />
+                      44536 Lünen, Germany
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
