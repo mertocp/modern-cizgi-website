@@ -33,16 +33,16 @@ export default function Navigation() {
 
   return (
     <>
-      {/* Top Bar - Keep as is */}
+      {/* Top Bar - UPDATED CONTACT INFO */}
       <div className="bg-dark text-light py-2 hidden md:block">
         <div className="container flex justify-end items-center gap-6 text-sm">
-          <a href="tel:+902125550123" className="flex items-center gap-2 hover:text-primary transition-colors">
+          <a href="tel:+902124529359" className="flex items-center gap-2 hover:text-primary transition-colors">
             <Phone className="w-4 h-4" />
-            +90 212 555 0123
+            +90 212 452 9359
           </a>
-          <a href="mailto:info@moderncizgi.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+          <a href="mailto:info@moderncizgimimarlik.com" className="flex items-center gap-2 hover:text-primary transition-colors">
             <Mail className="w-4 h-4" />
-            info@moderncizgi.com
+            info@moderncizgimimarlik.com
           </a>
         </div>
       </div>
