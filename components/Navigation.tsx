@@ -55,18 +55,22 @@ export default function Navigation() {
       >
         <div className="container">
           <div className="flex items-center justify-between h-20">
-            {/* Logo with Orange Left Border - OPTION 3 */}
+            {/* Logo with Shadow ONLY on Logo Image - NEW */}
             <Link 
               href="/" 
-              className="flex items-center space-x-3 px-4 py-2 border-l-4 border-primary bg-light-grey/30 rounded-r-lg hover:bg-light-grey/50 transition-all"
+              className="flex items-center space-x-3 hover:opacity-90 transition-opacity"
             >
-              <Image
-                src="/mcmlogo.png"
-                alt="Modern Çizgi Mimarlık Logo"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
+              <div style={{
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3)) drop-shadow(0 0 8px rgba(255,107,53,0.3))'
+              }}>
+                <Image
+                  src="/mcmlogo.png"
+                  alt="Modern Çizgi Mimarlık Logo"
+                  width={50}
+                  height={50}
+                  className="object-contain"
+                />
+              </div>
               <span className="text-2xl font-bold text-primary">
                 Modern Çizgi Mimarlık
               </span>
