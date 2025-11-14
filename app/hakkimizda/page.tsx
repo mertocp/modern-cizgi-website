@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Award, Users, Globe, Target, Heart, Zap } from 'lucide-react'
+import { ArrowRight, Award, Users, Globe, Target, Heart, Zap, Leaf, Eye } from 'lucide-react'
 
 export const metadata = {
   title: 'Hakkımızda | Modern Çizgi Mimarlık',
@@ -9,64 +9,48 @@ export const metadata = {
 
 const timeline = [
   {
+    year: '1967',
+    description: 'Sektöre "Elbir Mobilya" adıyla giriş yapıldı.',
+  },
+  {
+    year: '1998',
+    description: 'Atılım Ahşap kuruldu.',
+  },
+  {
+    year: '2000',
+    description: 'Stand imalatına başlandı.',
+  },
+  {
     year: '2004',
-    title: 'Kuruluş',
-    description: 'Modern Çizgi Mimarlık, fuar standı sektöründe yolculuğuna başladı.',
+    description: 'Modern Çizgi Mimarlık dekorasyon ve fuarcılık firması kuruldu.',
   },
   {
-    year: '2007',
-    title: 'İlk Büyük Proje',
-    description: 'İstanbul\'da düzenlenen uluslararası fuarda ilk büyük projemizi tamamladık.',
+    year: '2005',
+    description: 'Elbir Kuyumculuk firması kuruldu.',
   },
   {
-    year: '2010',
-    title: 'Avrupa Açılımı',
-    description: 'Almanya\'da ilk projelerimizi gerçekleştirerek uluslararası arenaya adım attık.',
+    year: '2011',
+    description: 'Modüler sisteme geçiş yapıldı.',
   },
   {
-    year: '2013',
-    title: 'Üretim Tesisi',
-    description: 'Modern üretim tesisimizi İstanbul\'da faaliyete geçirdik.',
+    year: '2015',
+    description: 'Maxima stand hizmeti verilmeye başlandı.',
   },
   {
     year: '2016',
-    title: '1000+ Stand Başarısı',
-    description: 'Bin projeyi aşan deneyimimizle sektörde önemli bir kilometre taşına ulaştık.',
+    description: 'Siyah Maxima sistemini Türkiye\'de ilk kez kullanarak sektöre öncülük ettik.',
+  },
+  {
+    year: '2017',
+    description: 'Yıldız stand sistemi geliştirildi ve patentlendi.',
   },
   {
     year: '2018',
-    title: 'Almanya Ofisi',
-    description: 'Lünen\'de Avrupa operasyonlarımız için ofis açtık.',
-  },
-  {
-    year: '2020',
-    title: 'Dijital Dönüşüm',
-    description: '3D sanal tur ve dijital tasarım hizmetlerini portföyümüze ekledik.',
-  },
-  {
-    year: '2022',
-    title: 'Sürdürülebilirlik',
-    description: 'Çevre dostu malzemeler ve sürdürülebilir üretim süreçlerine geçiş yaptık.',
+    description: 'Avrupa pazarına yönelik ilk şube açıldı.',
   },
   {
     year: '2023',
-    title: '2000+ Proje',
-    description: 'İki bin projeyi tamamlayarak sektörün lider firması olduk.',
-  },
-  {
-    year: '2024',
-    title: 'Yeni Teknolojiler',
-    description: 'Yapay zeka destekli tasarım ve modüler akıllı stand sistemlerini başlattık.',
-  },
-  {
-    year: '2025',
-    title: 'Küresel Genişleme',
-    description: 'Yedi ülkede aktif operasyonlarla global büyüme hedeflerimize ulaştık.',
-  },
-  {
-    year: '2026',
-    title: 'Geleceğe Bakış',
-    description: 'Sürdürülebilir inovasyon ve dijital dönüşümle sektörün geleceğini şekillendiriyoruz.',
+    description: 'Elbir İnşaat firması kuruluşu ve ilk şantiyesi.',
   },
 ]
 
@@ -79,19 +63,24 @@ const stats = [
 
 const values = [
   {
-    icon: Heart,
-    title: 'Müşteri Odaklılık',
-    description: 'Her projede müşterilerimizin ihtiyaçlarını önceliğimiz olarak görüyor, beklentilerini aşmayı hedefliyoruz.',
+    icon: Leaf,
+    title: 'Sürdürülebilirlik',
+    description: 'Çevre dostu malzemeler ve sürdürülebilir üretim yöntemleriyle geleceğe katkı sağlıyoruz.',
   },
   {
-    icon: Zap,
-    title: 'İnovasyon',
-    description: 'Sektördeki en yeni teknolojileri ve tasarım trendlerini takip ederek, yaratıcı çözümler sunuyoruz.',
+    icon: Target,
+    title: 'Vizyon',
+    description: 'Sektörde öncü ve yenilikçi çözümlerle global fuarcılıkta fark yaratmayı hedefliyoruz.',
   },
   {
     icon: Award,
     title: 'Kalite',
     description: 'Tasarımdan üretime, kurulumdan desteğe kadar her aşamada en yüksek kalite standartlarını uyguluyoruz.',
+  },
+  {
+    icon: Heart,
+    title: 'Müşteri Odaklılık',
+    description: 'Her projede müşterilerimizin ihtiyaçlarını önceliğimiz olarak görüyor, beklentilerini aşmayı hedefliyoruz.',
   },
 ]
 
@@ -146,7 +135,7 @@ export default function HakkimizdaPage() {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-8 text-center">Hikayemiz</h2>
-            <div className="space-y-6 text-lg text-grey">
+            <div className="space-y-6 text-xl text-grey leading-relaxed">
               <p>
                 2004 yılında kurulan Modern Çizgi Mimarlık, geleneksel stand üretimini sanat ve teknoloji ile harmanlayarak sektörde yeni bir dönem başlattı. İnovasyon DNA'mızda var; 3D görselleştirmeden modüler sistemlere, ahşap tasarımlardan Maxima premium standlara kadar geniş ürün yelpazemizle her marka için özel çözümler üretiyoruz. Avrupa'dan Türkiye'ye uzanan geniş hizmet ağımızla, markanızın global fuarlardaki en güçlü destekçisiyiz.
               </p>
@@ -156,26 +145,21 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Timeline - 2 Column Layout */}
-      <section className="py-24 bg-light-grey">
+      <section className="py-24 bg-primary text-light">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="section-heading">Yolculuğumuz</h2>
-            <p className="section-subheading">Büyüme ve başarı ile dolu yıllar</p>
+            <h2 className="section-heading text-light">GEÇMİŞ TECRÜBELERİMİZLE, HEP EN İYİYE</h2>
           </div>
 
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {timeline.map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full">
+                  <div className="bg-white/95 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full">
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-14 h-14 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                        <span className="text-light font-bold text-xl">{index + 1}</span>
-                      </div>
                       <div className="text-4xl font-bold text-primary">{item.year}</div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-3 text-dark">{item.title}</h3>
-                    <p className="text-grey leading-relaxed">{item.description}</p>
+                    <p className="text-dark leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}
@@ -209,7 +193,7 @@ export default function HakkimizdaPage() {
             <p className="section-subheading">Bizi biz yapan prensipler</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {values.map((value, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">

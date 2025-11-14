@@ -2,17 +2,23 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 
 export default function IletisimPage() {
   const [formData, setFormData] = useState({
     firmaAdi: '',
     ilgiliKisi: '',
-    email: '',
-    telefon: '',
     fuarAdi: '',
+    email: '',
+    standPlani: '',
     standOlcusu: '',
     mesaj: '',
+    telefon: '',
+    toplantiOdasi: '',
+    tvEkran: '',
+    depo: '',
+    tahminiButce: '',
+    sergilenecekUrunler: '',
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -29,11 +35,17 @@ export default function IletisimPage() {
       setFormData({
         firmaAdi: '',
         ilgiliKisi: '',
-        email: '',
-        telefon: '',
         fuarAdi: '',
+        email: '',
+        standPlani: '',
         standOlcusu: '',
         mesaj: '',
+        telefon: '',
+        toplantiOdasi: '',
+        tvEkran: '',
+        depo: '',
+        tahminiButce: '',
+        sergilenecekUrunler: '',
       })
       
       // Clear message after 5 seconds
@@ -41,7 +53,7 @@ export default function IletisimPage() {
     }, 1500)
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -64,7 +76,7 @@ export default function IletisimPage() {
         <div className="relative z-10 container text-center">
           <h1 className="section-heading text-light mb-6">İletişim</h1>
           <p className="section-subheading text-light/90 max-w-3xl mx-auto">
-            Fuar standı projeniz için ücretsiz danışmanlık ve teklif almak üzere bizimle iletişime geçin
+            Fuar standı projeniz için teklif almak ve bizimle iletişime geçmek için formu doldurun
           </p>
         </div>
       </section>
@@ -81,6 +93,7 @@ export default function IletisimPage() {
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Required Fields */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firmaAdi" className="block text-sm font-semibold mb-2">
@@ -116,6 +129,21 @@ export default function IletisimPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
+                    <label htmlFor="fuarAdi" className="block text-sm font-semibold mb-2">
+                      Fuar Adı *
+                    </label>
+                    <input
+                      type="text"
+                      id="fuarAdi"
+                      name="fuarAdi"
+                      value={formData.fuarAdi}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                      placeholder="Katılacağınız fuar"
+                    />
+                  </div>
+                  <div>
                     <label htmlFor="email" className="block text-sm font-semibold mb-2">
                       E-posta *
                     </label>
@@ -130,41 +158,27 @@ export default function IletisimPage() {
                       placeholder="ornek@firma.com"
                     />
                   </div>
-                  <div>
-                    <label htmlFor="telefon" className="block text-sm font-semibold mb-2">
-                      Telefon *
-                    </label>
-                    <input
-                      type="tel"
-                      id="telefon"
-                      name="telefon"
-                      value={formData.telefon}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors"
-                      placeholder="+90 555 123 4567"
-                    />
-                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="fuarAdi" className="block text-sm font-semibold mb-2">
-                      Fuar Adı
+                    <label htmlFor="standPlani" className="block text-sm font-semibold mb-2">
+                      Stand Planı *
                     </label>
                     <input
                       type="text"
-                      id="fuarAdi"
-                      name="fuarAdi"
-                      value={formData.fuarAdi}
+                      id="standPlani"
+                      name="standPlani"
+                      value={formData.standPlani}
                       onChange={handleChange}
+                      required
                       className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors"
-                      placeholder="Katılacağınız fuar"
+                      placeholder="Stand planı linki veya açıklama"
                     />
                   </div>
                   <div>
                     <label htmlFor="standOlcusu" className="block text-sm font-semibold mb-2">
-                      Stand Ölçüsü (opsiyonel)
+                      Stand Ölçüsü *
                     </label>
                     <input
                       type="text"
@@ -172,8 +186,9 @@ export default function IletisimPage() {
                       name="standOlcusu"
                       value={formData.standOlcusu}
                       onChange={handleChange}
+                      required
                       className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors"
-                      placeholder="örn: 3m x 4m"
+                      placeholder="örn: 3m x 4m x 3m (tahmini)"
                     />
                   </div>
                 </div>
@@ -192,6 +207,111 @@ export default function IletisimPage() {
                     className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
                     placeholder="Projeniz hakkında detaylı bilgi verin..."
                   />
+                </div>
+
+                {/* Optional Fields */}
+                <div className="pt-4 border-t-2 border-light-grey-2">
+                  <h3 className="text-lg font-semibold mb-4 text-grey">Opsiyonel Bilgiler</h3>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="telefon" className="block text-sm font-semibold mb-2">
+                        Telefon
+                      </label>
+                      <input
+                        type="tel"
+                        id="telefon"
+                        name="telefon"
+                        value={formData.telefon}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                        placeholder="+90 555 123 4567"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="tahminiButce" className="block text-sm font-semibold mb-2">
+                        Tahmini Bütçe
+                      </label>
+                      <input
+                        type="text"
+                        id="tahminiButce"
+                        name="tahminiButce"
+                        value={formData.tahminiButce}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors"
+                        placeholder="Opsiyonel"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <div>
+                      <label htmlFor="toplantiOdasi" className="block text-sm font-semibold mb-2">
+                        Toplantı Odası İhtiyacı?
+                      </label>
+                      <select
+                        id="toplantiOdasi"
+                        name="toplantiOdasi"
+                        value={formData.toplantiOdasi}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white"
+                      >
+                        <option value="">Seçiniz</option>
+                        <option value="Evet">Evet</option>
+                        <option value="Hayır">Hayır</option>
+                        <option value="Emin Değilim">Emin Değilim</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="tvEkran" className="block text-sm font-semibold mb-2">
+                        TV / Ekran İhtiyacı?
+                      </label>
+                      <select
+                        id="tvEkran"
+                        name="tvEkran"
+                        value={formData.tvEkran}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white"
+                      >
+                        <option value="">Seçiniz</option>
+                        <option value="Evet">Evet</option>
+                        <option value="Hayır">Hayır</option>
+                        <option value="Emin Değilim">Emin Değilim</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="depo" className="block text-sm font-semibold mb-2">
+                        Depo İhtiyacı?
+                      </label>
+                      <select
+                        id="depo"
+                        name="depo"
+                        value={formData.depo}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white"
+                      >
+                        <option value="">Seçiniz</option>
+                        <option value="Evet">Evet</option>
+                        <option value="Hayır">Hayır</option>
+                        <option value="Emin Değilim">Emin Değilim</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="mt-6">
+                    <label htmlFor="sergilenecekUrunler" className="block text-sm font-semibold mb-2">
+                      Sergilenecek Ürünler
+                    </label>
+                    <textarea
+                      id="sergilenecekUrunler"
+                      name="sergilenecekUrunler"
+                      value={formData.sergilenecekUrunler}
+                      onChange={handleChange}
+                      rows={4}
+                      className="w-full px-4 py-3 border-2 border-light-grey-2 rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
+                      placeholder="Sergileyeceğiniz ürünler hakkında bilgi (opsiyonel)"
+                    />
+                  </div>
                 </div>
 
                 <button
@@ -235,6 +355,7 @@ export default function IletisimPage() {
                       <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div className="text-grey">
                         <p className="font-semibold">Telefon:</p>
+                        <p>+90 538 405 33 70</p>
                         <p>+90 212 452 93 59</p>
                       </div>
                     </div>
@@ -242,8 +363,7 @@ export default function IletisimPage() {
                       <Mail className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div className="text-grey">
                         <p className="font-semibold">E-posta:</p>
-                        <p>info@moderncizgi.com</p>
-                        <p>sales@moderncizgi.com</p>
+                        <p>info@moderncizgimimarlik.com</p>
                       </div>
                     </div>
                     <a
@@ -269,15 +389,8 @@ export default function IletisimPage() {
                       <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                       <div className="text-grey">
                         <p className="font-semibold">Adres:</p>
-                        <p>MAm Kühlturm 17</p>
+                        <p>Am Kühlturm 17</p>
                         <p>44536 Lünen, Deutschland</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <Phone className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                      <div className="text-grey">
-                        <p className="font-semibold">Telefon:</p>
-                        <p>+90 538 405 33 70</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -296,28 +409,6 @@ export default function IletisimPage() {
                       <MapPin className="w-4 h-4" />
                       Haritada Görüntüle
                     </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* Working Hours */}
-              <div className="bg-primary text-light p-6 rounded-lg">
-                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <Clock className="w-5 h-5" />
-                  Çalışma Saatleri
-                </h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span>Pazartesi - Cuma:</span>
-                    <span className="font-semibold">09:00 - 18:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Cumartesi:</span>
-                    <span className="font-semibold">10:00 - 16:00</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Pazar:</span>
-                    <span className="font-semibold">Kapalı</span>
                   </div>
                 </div>
               </div>
@@ -367,7 +458,7 @@ export default function IletisimPage() {
               <h3 className="text-2xl font-bold mb-4">Lünen, Almanya</h3>
               <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.483!2d7.528192!3d51.617503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM3JzAzLjAiTiA3wrAzMSc0MS41IkU!5e0!3m2!1sen!2s!4v1699999999!5m2!1sen!2s&q=MAm+K%C3%BChlturm+17,+44536+L%C3%BCnen,+Germany"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.483!2d7.528192!3d51.617503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM3JzAzLjAiTiA3wrAzMSc0MS41IkU!5e0!3m2!1sen!2s!4v1699999999!5m2!1sen!2s&q=Am+K%C3%BChlturm+17,+44536+L%C3%BCnen,+Germany"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

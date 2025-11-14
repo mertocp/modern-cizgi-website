@@ -20,7 +20,7 @@ export default function PortfolioPage() {
             src="/images/backgrounds/bg-projects.jpg"
             alt="Fuar standı projeleri"
             fill
-            className="object-cover object-top"
+            className="object-cover object-[center_30%]"
           />
           <div className="absolute inset-0 bg-black/60" />
         </div>

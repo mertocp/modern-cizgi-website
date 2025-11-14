@@ -34,7 +34,7 @@ export default function Navigation() {
   return (
     <>
       {/* Top Bar - UPDATED CONTACT INFO */}
-      <div className="bg-dark text-light py-2 hidden md:block">
+      <div className="bg-dark text-light py-1 hidden md:block">
         <div className="container flex justify-end items-center gap-6 text-sm">
           <a href="tel:+902124529359" className="flex items-center gap-2 hover:text-primary transition-colors">
             <Phone className="w-4 h-4" />

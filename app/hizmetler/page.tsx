@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowRight, Lightbulb, Hammer, LayoutGrid, Box, Wrench, Globe, CheckCircle2, TreeDeciduous, Award } from 'lucide-react'
+import { ArrowRight, Lightbulb, Hammer, Box, Wrench, Globe, CheckCircle2, TreeDeciduous, Award } from 'lucide-react'
 
 export const metadata = {
   title: 'Hizmetlerimiz | Modern Çizgi Mimarlık',
@@ -33,18 +33,6 @@ const services = [
     ],
   },
   {
-    icon: LayoutGrid,
-    title: 'Modüler Sistemler',
-    description: 'Esnek, yeniden kullanılabilir ve maliyet etkin modüler stand sistemleri.',
-    features: [
-      'Farklı fuarlara uyarlanabilir',
-      'Kolay taşıma ve depolama',
-      'Hızlı kurulum süresi',
-      'Ekonomik ve sürdürülebilir',
-      'Geniş konfigürasyon seçenekleri',
-    ],
-  },
-  {
     icon: TreeDeciduous,
     title: 'Ahşap Stand Tasarımı',
     description: 'Doğal ve sıcak bir atmosfer yaratan ahşap stand çözümleri ile markanıza organik ve prestijli bir kimlik kazandırın.',
@@ -58,7 +46,7 @@ const services = [
   },
   {
     icon: Award,
-    title: 'Maxima Premium Standlar',
+    title: 'Maxima Standlar',
     description: 'Geniş alanlı, etkileyici ve gösterişli stand çözümleri ile fuarda maksimum görünürlük ve prestij sağlayın.',
     features: [
       '100+ m² geniş alan tasarımları',
@@ -171,16 +159,32 @@ export default function HizmetlerPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
-            {processSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-light font-bold text-2xl shadow-lg">
-                  {index + 1}
+          <div className="relative">
+            {/* Connecting Line */}
+            <div className="hidden md:block absolute top-20 left-0 right-0 h-1 bg-primary/30" style={{ left: '10%', right: '10%' }} />
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+              {processSteps.map((step, index) => (
+                <div key={index} className="relative">
+                  {/* Card */}
+                  <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    {/* Icon/Step Indicator */}
+                    <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4 shadow-lg">
+                      <ArrowRight className="w-8 h-8 text-light" />
+                    </div>
+                    <h3 className="font-bold text-lg mb-3 text-center">{step.title}</h3>
+                    <p className="text-grey text-sm text-center leading-relaxed">{step.description}</p>
+                  </div>
+
+                  {/* Arrow Between Steps (Hidden on Mobile) */}
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden md:block absolute top-16 -right-4 text-primary">
+                      <ArrowRight className="w-8 h-8" />
+                    </div>
+                  )}
                 </div>
-                <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-                <p className="text-grey text-sm">{step.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
