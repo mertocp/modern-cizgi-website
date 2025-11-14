@@ -13,6 +13,7 @@ export default function Home() {
             src="/images/hero/hero-arco-irisa.jpg"
             alt="Modern Arco Irisa fuar standı"
             fill
+            quality={95}
             className="object-cover"
             priority
           />
@@ -136,6 +137,8 @@ export default function Home() {
                   src={brand.photos[0]}
                   alt={brand.name}
                   fill
+                  quality={95}
+                  priority
                   className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
@@ -182,6 +185,7 @@ export default function Home() {
                       alt={`${client.name} logo`}
                       width={client.width}
                       height={client.height}
+                      quality={90}
                       className="object-contain max-h-[90px]"
                       style={{ maxWidth: '100%' }}
                     />

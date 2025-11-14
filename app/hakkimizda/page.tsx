@@ -155,11 +155,11 @@ export default function HakkimizdaPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {timeline.map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-white/95 p-5 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                  <div className="bg-white/95 p-5 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 min-h-[120px] flex flex-col">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="text-2xl font-bold text-primary">{item.year}</div>
                     </div>
-                    <p className="text-dark text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-dark text-sm leading-relaxed flex-1">{item.description}</p>
                   </div>
                 </div>
               ))}

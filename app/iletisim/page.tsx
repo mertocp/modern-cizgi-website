@@ -413,35 +413,35 @@ export default function IletisimPage() {
                 </div>
 
                 {/* Social Media */}
-                <div className="bg-white p-6 rounded-lg shadow-lg">
-                  <h3 className="text-xl font-bold mb-6 text-center">Bizi Takip Edin</h3>
-                  <div className="flex justify-center items-center gap-6">
+                <div className="bg-gradient-to-br from-primary/5 to-primary/10 p-10 rounded-lg shadow-lg border-2 border-primary/20 mt-8">
+                  <h3 className="text-2xl font-bold mb-8 text-center text-dark">Bizi Takip Edin</h3>
+                  <div className="flex justify-center items-center gap-8">
                     <a
                       href="https://www.facebook.com/moderncizgi"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-14 h-14 bg-light-grey rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300"
+                      className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 shadow-md hover:shadow-xl transition-all duration-300"
                       aria-label="Facebook"
                     >
-                      <Facebook className="w-7 h-7" />
+                      <Facebook className="w-10 h-10" />
                     </a>
                     <a
                       href="https://www.instagram.com/moderncizgimimarlik"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-14 h-14 bg-light-grey rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300"
+                      className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 shadow-md hover:shadow-xl transition-all duration-300"
                       aria-label="Instagram"
                     >
-                      <Instagram className="w-7 h-7" />
+                      <Instagram className="w-10 h-10" />
                     </a>
                     <a
                       href="https://www.linkedin.com/company/moderncizgi"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-14 h-14 bg-light-grey rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300"
+                      className="w-20 h-20 bg-white rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 shadow-md hover:shadow-xl transition-all duration-300"
                       aria-label="LinkedIn"
                     >
-                      <Linkedin className="w-7 h-7" />
+                      <Linkedin className="w-10 h-10" />
                     </a>
                   </div>
                 </div>
