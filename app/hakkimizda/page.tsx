@@ -145,21 +145,21 @@ export default function HakkimizdaPage() {
       </section>
 
       {/* Timeline - 2 Column Layout */}
-      <section className="py-24 bg-primary text-light">
+      <section className="py-16 bg-primary text-light">
         <div className="container">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="section-heading text-light">GEÇMİŞ TECRÜBELERİMİZLE, HEP EN İYİYE</h2>
           </div>
 
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {timeline.map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="bg-white/95 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 h-full">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="text-4xl font-bold text-primary">{item.year}</div>
+                  <div className="bg-white/95 p-5 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="text-2xl font-bold text-primary">{item.year}</div>
                     </div>
-                    <p className="text-dark leading-relaxed">{item.description}</p>
+                    <p className="text-dark text-sm leading-relaxed">{item.description}</p>
                   </div>
                 </div>
               ))}

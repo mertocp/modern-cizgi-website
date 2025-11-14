@@ -107,6 +107,7 @@ export default function BrandLightbox({ brand, onClose }: BrandLightboxProps) {
             src={brand.photos[currentIndex]}
             alt={`${brand.name} - ${currentIndex + 1}`}
             fill
+            quality={95}
             className="object-contain transition-transform duration-200 ease-out will-change-transform"
             priority
           />

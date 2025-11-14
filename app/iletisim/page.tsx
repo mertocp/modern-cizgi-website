@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Facebook, Instagram, Linkedin } from 'lucide-react'
 
 export default function IletisimPage() {
   const [formData, setFormData] = useState({
@@ -411,6 +411,40 @@ export default function IletisimPage() {
                     </a>
                   </div>
                 </div>
+
+                {/* Social Media */}
+                <div className="bg-white p-6 rounded-lg shadow-lg">
+                  <h3 className="text-xl font-bold mb-6 text-center">Bizi Takip Edin</h3>
+                  <div className="flex justify-center items-center gap-6">
+                    <a
+                      href="https://www.facebook.com/moderncizgi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-14 h-14 bg-light-grey rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300"
+                      aria-label="Facebook"
+                    >
+                      <Facebook className="w-7 h-7" />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/moderncizgimimarlik"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-14 h-14 bg-light-grey rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300"
+                      aria-label="Instagram"
+                    >
+                      <Instagram className="w-7 h-7" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/company/moderncizgi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-14 h-14 bg-light-grey rounded-full flex items-center justify-center text-dark hover:bg-primary hover:text-white hover:scale-110 transition-all duration-300"
+                      aria-label="LinkedIn"
+                    >
+                      <Linkedin className="w-7 h-7" />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -458,7 +492,7 @@ export default function IletisimPage() {
               <h3 className="text-2xl font-bold mb-4">Lünen, Almanya</h3>
               <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2465.483!2d7.528192!3d51.617503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDM3JzAzLjAiTiA3wrAzMSc0MS41IkU!5e0!3m2!1sen!2s!4v1699999999!5m2!1sen!2s&q=Am+K%C3%BChlturm+17,+44536+L%C3%BCnen,+Germany"
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Am+Kühlturm+17,+44536+Lünen,+Germany&zoom=15"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
