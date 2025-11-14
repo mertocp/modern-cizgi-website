@@ -126,7 +126,7 @@ export default function HakkimizdaPage() {
       <section className="relative py-24 text-light">
         <div className="absolute inset-0">
           <Image
-            src="/images/backgrounds/bg-kareban.jpg"
+            src="/images/backgrounds/bg-about.jpg"
             alt="Hakkımızda"
             fill
             className="object-cover"

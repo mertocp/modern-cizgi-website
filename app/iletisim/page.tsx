@@ -54,7 +54,7 @@ export default function IletisimPage() {
       <section className="relative py-24 text-light">
         <div className="absolute inset-0">
           <Image
-            src="/images/backgrounds/bg-arco-irisa.jpg"
+            src="/images/backgrounds/bg-contact.jpg"
             alt="İletişim"
             fill
             className="object-cover"
